@@ -48,7 +48,7 @@ export default function Home() {
 
   return (
     <div className="h-screen w-screen bg-cover bg-center flex flex-col justify-center" style={{ backgroundImage: "url('/alsointhemind.jpg')" }}>
-      <div className="px-4 py-8 bg-white/50 backdrop-blur-sm rounded-xl mx-auto flex flex-col gap-4 mx-2 max-w-[90%]">
+      <div className="px-6 py-8 bg-white/50 backdrop-blur-sm rounded-xl mx-auto flex flex-col gap-4 mx-2 max-w-[90%]">
         <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>This is also</h1>
         <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
         <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
