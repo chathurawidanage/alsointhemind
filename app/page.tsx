@@ -22,19 +22,19 @@ const renderer = ({ days, hours, minutes, seconds, completed }: { days: number; 
     // Render a countdown
     return (
       <div className={`flex flex-row gap-4 text-white text-xl sm:text-2xl ${libreBaskerville.className}`}>
-        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center">
+        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center w-16 sm:w-24">
           {days.toString().padStart(2, "0")}
           <div className="text-white text-xs text-center">Days</div>
         </div>
-        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center">
+        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center w-16 sm:w-24">
           {hours.toString().padStart(2, "0")}
           <div className="text-white text-xs text-center">Hours</div>
         </div>
-        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center">
+        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center w-16 sm:w-24">
           {minutes.toString().padStart(2, "0")}
           <div className="text-white text-xs text-center">Minutes</div>
         </div>
-        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center">
+        <div className="bg-title-gray/80 rounded-xl px-2 py-4 text-center w-16 sm:w-24">
           {seconds.toString().padStart(2, "0")}
           <div className="text-white text-xs text-center">Seconds</div>
         </div>
@@ -49,9 +49,9 @@ export default function Home() {
   return (
     <div className="h-screen w-screen bg-cover bg-center flex flex-col justify-center" style={{ backgroundImage: "url('/alsointhemind.jpg')" }}>
       <div className="px-4 py-8 bg-white/50 backdrop-blur-sm rounded-xl mx-auto flex flex-col gap-4 mx-2 max-w-[90%]">
-        <h1 className={`text-5xl sm:text-7xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>This is also</h1>
+        <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>This is also</h1>
         <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
-        <h1 className={`text-5xl sm:text-7xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
+        <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
         <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>A Disciple’s Account, Kept Private for 25 Years</h2>
         <h2 className={`text-title-gray font-bold text-l sm:text-2xl text-center mt-16 ${libreBaskerville.className}`}>Soon to be Revealed</h2>
         <div className="flex justify-center">
@@ -62,7 +62,7 @@ export default function Home() {
             <Image src={ssmctLogo} alt="SSMCT Logo" width={50} height={50} />
           </div>
           <div className="text-title-gray text-sm text-center">
-            Brought to you by the Sri Sambuddha Mission Charitable Trust
+            Brought to you by the <a href="https://srisambuddhamission.org/" target="_blank">Sri Sambuddha Mission Charitable Trust</a>
           </div>
         </div>
       </div>
