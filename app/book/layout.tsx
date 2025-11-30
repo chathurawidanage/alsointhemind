@@ -5,14 +5,14 @@ import 'nextra-theme-docs/style.css'
 
 
 
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+const banner = <Banner storageKey="some-key">This is also in the mind is released 🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
+    logo={<b>Also in the Mind</b>}
   // ... Your additional navbar options
   />
 )
-const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>
+const footer = <Footer>CC BY-NC-ND 4.0 {new Date().getFullYear()} © Sri Sambuddha Mission Charitable Trust.</Footer>
 
 export default async function BookLayout({
   children,
@@ -24,9 +24,8 @@ export default async function BookLayout({
       banner={banner}
       navbar={navbar}
       pageMap={await getPageMap()}
-      docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
-      footer={footer}
-    >
+      docsRepositoryBase="https://github.com/chathurawidanage/alsointhemind"
+      footer={footer}>
       {children}
     </Layout>
   );
