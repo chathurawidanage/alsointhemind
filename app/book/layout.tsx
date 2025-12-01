@@ -1,18 +1,15 @@
-import { Banner } from "nextra/components";
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
+import { Banner, Button } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
-import 'nextra-theme-docs/style.css'
 
-
-
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
+const banner = <Banner storageKey="community-join-banner">
+  Join our community or newsletter call to action (to be changed). <Button variant="outline">Join now!</Button>
+</Banner>
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
-  // ... Your additional navbar options
-  />
+    logo={<b>Also in the Mind</b>} />
 )
-const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>
+const footer = <Footer>CC BY-NC-ND 4.0 {new Date().getFullYear()} © Sri Sambuddha Mission Charitable Trust.</Footer>
 
 export default async function BookLayout({
   children,
@@ -24,9 +21,8 @@ export default async function BookLayout({
       banner={banner}
       navbar={navbar}
       pageMap={await getPageMap()}
-      docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
-      footer={footer}
-    >
+      docsRepositoryBase="https://github.com/chathurawidanage/alsointhemind"
+      footer={footer}>
       {children}
     </Layout>
   );
