@@ -10,6 +10,7 @@
     "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.5",
     "clsx": "^2.1.0",
     "framer-motion": "^12.0.0",
     "next": "16.0.3",
@@ -19,6 +20,7 @@
     "react": "19.2.0",
     "react-countdown": "^2.3.6",
     "react-dom": "19.2.0",
+    "react-icons": "^5.5.0",
     "shiki": "^3.17.0"
   },
   "devDependencies": {
