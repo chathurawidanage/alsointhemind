@@ -8,7 +8,10 @@ import { Footer } from "../components/Footer";
 // </Banner>
 const navbar = (
   <Navbar
-    logo={<b>Also in the Mind</b>} />
+    logo={<div className="flex flex-row gap-2 items-center">
+      <div className="h-[50px] w-[50px] bg-gray-200 rounded-lg mr-2 flex items-center justify-center text-xs text-gray-400">Logo</div>
+      <p className="font-bold text-inherit hidden sm:block">Also in the Mind</p>
+    </div>} />
 )
 
 export default async function BookLayout({
