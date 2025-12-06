@@ -24,14 +24,14 @@ export const TrustSection = () => {
                     </p>
                 </div>
 
-                <div className={`mt-8 text-gray-500 text-sm flex flex-col gap-1 ${figTree.className}`}>
+                <div className={`mt-4 text-gray-500 text-sm flex flex-col gap-1 ${figTree.className}`}>
                     <p>Sri Sambuddha Ramaneeya Ashramaya, Ethaudakanda, Thalawathura, Dunumala, Galapitamada, Sri Lanka.</p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2">
-                        <Link href="mailto:info@srisambuddhamission.org" color="foreground" className="text-sm hover:text-book-orange transition-colors">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-2">
+                        <Link href="mailto:info@srisambuddhamission.org" color="foreground" className="text-sm hover:text-book-orange transition-colors justify-center">
                             info@srisambuddhamission.org
                         </Link>
                         <span className="hidden sm:inline text-gray-300">|</span>
-                        <Link href="tel:+94777586808" color="foreground" className="text-sm hover:text-book-orange transition-colors">
+                        <Link href="tel:+94777586808" color="foreground" className="text-sm hover:text-book-orange transition-colors justify-center">
                             +94 777 586 808
                         </Link>
                     </div>
