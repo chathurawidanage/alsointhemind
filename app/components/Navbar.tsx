@@ -28,7 +28,7 @@ export const AppNavbar = () => {
             </NavbarContent>
             <NavbarContent justify="end">
                 <NavbarItem>
-                    <Button as={Link} color="default" className="bg-book-orange text-white" href="#" variant="solid">
+                    <Button as={Link} color="default" className="bg-book-orange text-white" href="/book" variant="solid">
                         Read Online
                     </Button>
                 </NavbarItem>

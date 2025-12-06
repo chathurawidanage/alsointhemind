@@ -1,6 +1,6 @@
 export default {
     index: {
-        title: "Home",
+        title: "Also in the Mind",
         type: "page"
     },
     forward: {
