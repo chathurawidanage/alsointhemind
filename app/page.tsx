@@ -14,17 +14,14 @@ export default function Home() {
 
   return (
     <HeroUIProvider>
-      <div className={"relative bg-cover bg-center bg-no-repeat flex flex-col " + figTree.className} style={{ backgroundImage: "url('/alsointhemind.jpg')" }}>
-        <div className="absolute inset-0 bg-white/60"></div>
+      <div className={"flex flex-col " + figTree.className}>
         <AppNavbar />
-        <div className="relative z-10">
-          <Hero />
-          <BookDescription />
-          <MonkProfiles />
-          <WordsFromMasters />
-          <TrustSection />
-          <Footer />
-        </div>
+        <Hero />
+        <BookDescription />
+        <MonkProfiles />
+        <WordsFromMasters />
+        <TrustSection />
+        <Footer />
       </div>
     </HeroUIProvider>
   );

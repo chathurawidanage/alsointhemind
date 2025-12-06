@@ -6,9 +6,8 @@ export const AppNavbar = () => {
     return (
         <Navbar className="fixed mt-4 rounded-xl max-w-[calc(100%-var(--spacing)*8)] mx-auto" isBordered>
             <NavbarBrand>
-                {/* Placeholder Logo */}
                 <div className="h-[50px] w-[50px] bg-gray-200 rounded-lg mr-2 flex items-center justify-center text-xs text-gray-400">Logo</div>
-                <p className="font-bold text-inherit">Also in the Mind</p>
+                <p className="font-bold text-inherit hidden sm:block">Also in the Mind</p>
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
