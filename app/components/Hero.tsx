@@ -13,7 +13,7 @@ export const Hero = () => {
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>A Disciple’s Account, Kept Private for 25 Years</h2>
                 <h2 className={`text-title-gray font-bold text-l sm:text-2xl text-center mt-16 ${figTree.className}`}>Available Now!</h2>
                 <div className="flex flex-row gap-8 justify-center mt-16">
-                    <Button size="lg" as={Link} href="#" variant="solid" className="bg-book-orange text-white">
+                    <Button size="lg" as={Link} href="/book" variant="solid" className="bg-book-orange text-white">
                         Read Online
                     </Button>
                     <Dropdown>
