@@ -9,7 +9,7 @@ const navbar = (
   <Navbar
     logo={<b>Also in the Mind</b>} />
 )
-const footer = <Footer>CC BY-NC-ND 4.0 {new Date().getFullYear()} © Sri Sambuddha Mission Charitable Trust.</Footer>
+const footer = <Footer>All Rights Reserved {new Date().getFullYear()} © Sri Sambuddha Mission Charitable Trust.</Footer>
 
 export default async function BookLayout({
   children,
