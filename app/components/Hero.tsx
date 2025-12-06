@@ -4,8 +4,9 @@ import { figTree, leagueSpartan, libreBaskerville } from "../fonts";
 
 export const Hero = () => {
     return (
-        <div className="mt-32">
-            <div className="px-6 mx-auto flex flex-col gap-4 max-w-[1024px]">
+        <div className="relative bg-cover bg-center bg-no-repeat pt-64 pb-32" style={{ backgroundImage: "url('/alsointhemind.jpg')" }}>
+            <div className="absolute inset-0 bg-white/60"></div>
+            <div className="relative z-10 px-6 mx-auto flex flex-col gap-4 max-w-[1024px]" >
                 <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>This is also</h1>
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
                 <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
@@ -27,6 +28,6 @@ export const Hero = () => {
                     </Dropdown>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
