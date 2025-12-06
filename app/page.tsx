@@ -7,6 +7,8 @@ import { figTree } from "./fonts";
 import { BookDescription } from "./components/BookDescription";
 import { MonkProfiles } from "./components/MonkProfiles";
 import { TrustSection } from "./components/TrustSection";
+import { WordsFromMasters } from "./components/WordsFromMasters";
+import { Footer } from "./components/Footer";
 
 export default function Home() {
 
@@ -19,7 +21,9 @@ export default function Home() {
           <Hero />
           <BookDescription />
           <MonkProfiles />
+          <WordsFromMasters />
           <TrustSection />
+          <Footer />
         </div>
       </div>
     </HeroUIProvider>
