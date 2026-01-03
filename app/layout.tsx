@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import 'nextra-theme-docs/style.css';
 import "./globals.css";
+import { Head } from "nextra/components";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,8 +27,10 @@ export default async function RootLayout({
     <html lang="en"
       dir="ltr"
       suppressHydrationWarning>
+      <Head></Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+
         {children}
       </body>
     </html>
