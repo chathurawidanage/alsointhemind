@@ -8,7 +8,7 @@ export const MonkProfiles = () => {
     return (
         <div className="flex flex-col w-full">
             {/* Master Section */}
-            <div id="master" className="py-20 px-4 bg-white text-center">
+            <div id="master" className="py-20 px-4 bg-white text-center scroll-mt-16">
                 <h2 className={`text-2xl tracking-widest text-book-orange uppercase mb-8 font-bold ${leagueSpartan.className}`}>The Master</h2>
                 <div className="max-w-[800px] mx-auto flex flex-col items-center">
                     <Avatar

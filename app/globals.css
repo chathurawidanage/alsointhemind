@@ -13,3 +13,7 @@
   --color-book-orange: #ff751f;
   --color-title-gray: #1c293a;
 }
+
+html {
+  scroll-behavior: smooth;
+}

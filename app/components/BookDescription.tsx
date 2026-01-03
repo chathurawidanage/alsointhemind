@@ -6,7 +6,7 @@ export const BookDescription = () => {
     return (
         <div className="flex flex-col">
             {/* Intro Section - White */}
-            <div id="book-description" className="py-16 bg-white px-8">
+            <div id="book-description" className="py-16 bg-white px-8 scroll-mt-16">
                 <h2 className={`text-4xl md:text-5xl font-bold mb-12 text-book-orange uppercase text-center max-w-[1024px] mx-auto ${leagueSpartan.className}`}>Inside the book</h2>
                 <div className="max-w-[1024px] mx-auto flex flex-col-reverse md:flex-row gap-12 flex-wrap-reverse items-center">
                     <div className="md:flex-1">
