@@ -11,18 +11,18 @@ export const AppNavbar = () => {
             </NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
-                    <Link color="foreground" href="#">
-                        Join Community
+                    <Link color="foreground" href="/" className="uppercase font-bold text-sm tracking-wide">
+                        Home
                     </Link>
                 </NavbarItem>
-                <NavbarItem >
-                    <Link href="#" color="foreground">
-                        About
+                <NavbarItem>
+                    <Link href="/#master" color="foreground" className="uppercase font-bold text-sm tracking-wide">
+                        The Master
                     </Link>
                 </NavbarItem>
-                <NavbarItem >
-                    <Link href="#" color="foreground">
-                        Download
+                <NavbarItem>
+                    <Link href="/#book-description" color="foreground" className="uppercase font-bold text-sm tracking-wide">
+                        The Book
                     </Link>
                 </NavbarItem>
             </NavbarContent>
