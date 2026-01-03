@@ -5,12 +5,12 @@ export const BookExcerpt = () => {
     return (
         <div className="bg-[#1a1918] py-24 px-8 border-y border-[#3e3b38]">
             <div className="max-w-[800px] mx-auto">
-                <div className="flex flex-col items-center text-center mb-12">
-                    <FaQuoteLeft className="text-4xl text-book-orange mb-6 opacity-50" />
-                    <h2 className={`text-sm tracking-[0.2em] text-book-orange uppercase font-bold ${leagueSpartan.className}`}>Excerpt from the Book</h2>
+                <div className="flex flex-col items-center text-center mb-10">
+                    <FaQuoteLeft className="text-3xl text-book-orange mb-6 opacity-40" />
+                    <h2 className={`text-xs tracking-[0.2em] text-book-orange uppercase font-bold ${leagueSpartan.className}`}>Excerpt from the Book</h2>
                 </div>
 
-                <div className={`text-[#d5c4a1] text-lg md:text-xl leading-loose space-y-8 ${libreBaskerville.className}`}>
+                <div className={`text-[#d5c4a1] text-base md:text-lg leading-loose space-y-6 ${libreBaskerville.className}`}>
                     <p>
                         One day, Shanaka saw him slowly making his way back to his kuti. At that time, Ven. Ñāṇavimala was already well into his eighties. Decades of walking barefoot across Sri Lanka had worn his body thin. A hip injury sustained in his youth had worsened with age. He leaned heavily on his cane, walking slowly, each movement deliberate.
                     </p>
@@ -23,7 +23,7 @@ export const BookExcerpt = () => {
                         Ven. Ñāṇavimala slowly turned, his eyes calm and bright, and replied,
                     </p>
 
-                    <blockquote className="text-2xl md:text-3xl text-white italic pl-4 border-l-4 border-book-orange py-2 my-8 leading-normal font-medium">
+                    <blockquote className="text-xl md:text-2xl text-white italic pl-6 border-l-2 border-book-orange py-2 my-8 leading-relaxed font-normal opacity-90">
                         "This body is not mine—why should I give it to somebody else?"
                     </blockquote>
 
@@ -32,7 +32,7 @@ export const BookExcerpt = () => {
                     </p>
 
                     <p>
-                        He advised Shanaka once: <span className="text-white italic">"Don't rely on anybody or any person or anything that is external. They can separate at any moment and are all unreliable. But depend on your own mind that is developed and the All Enlightened One as your guide."</span>
+                        He advised Shanaka once: <span className="text-white italic opacity-90">"Don't rely on anybody or any person or anything that is external. They can separate at any moment and are all unreliable. But depend on your own mind that is developed and the All Enlightened One as your guide."</span>
                     </p>
 
                     <p>
@@ -48,7 +48,7 @@ export const BookExcerpt = () => {
                     </p>
                 </div>
 
-                <div className={`mt-12 text-center text-gray-500 text-sm tracking-wide ${leagueSpartan.className}`}>
+                <div className={`mt-12 text-center text-gray-500 text-xs tracking-widest uppercase ${leagueSpartan.className}`}>
                     — From Reflection 6: Living an Island Unto Oneself
                 </div>
             </div>
