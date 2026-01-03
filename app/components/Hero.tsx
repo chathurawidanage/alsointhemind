@@ -11,7 +11,6 @@ export const Hero = () => {
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
                 <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>A Disciple’s Account, Kept Private for 25 Years</h2>
-                <h2 className={`text-title-gray font-bold text-l sm:text-2xl text-center mt-8 md:mt-16 ${figTree.className}`}>Available Now!</h2>
                 <div className="flex flex-row gap-8 justify-center mt-8 md:mt-16">
                     <Dropdown>
                         <DropdownTrigger>
