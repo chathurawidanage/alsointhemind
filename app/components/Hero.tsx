@@ -11,10 +11,17 @@ export const Hero = () => {
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
                 <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center ${leagueSpartan.className}`}>in the mind</h1>
                 <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center ${libreBaskerville.className}`}>A Disciple’s Account, Kept Private for 25 Years</h2>
-                <div className="flex flex-row gap-8 justify-center mt-8 md:mt-16">
+                <div className="flex flex-col sm:flex-row gap-6 justify-center mt-8 md:mt-16 w-full sm:w-auto">
                     <Dropdown>
                         <DropdownTrigger>
-                            <Button size="lg" variant="solid" color="warning" endContent={<MdOutlineKeyboardArrowDown />}>Download</Button>
+                            <Button
+                                size="lg"
+                                variant="bordered"
+                                className="border-book-orange text-book-orange font-semibold min-w-[200px] bg-white/80 backdrop-blur-sm"
+                                endContent={<MdOutlineKeyboardArrowDown className="text-xl" />}
+                            >
+                                Download Free
+                            </Button>
                         </DropdownTrigger>
                         <DropdownMenu aria-label="Static Actions">
                             <DropdownItem key="pdf">PDF</DropdownItem>
@@ -22,7 +29,13 @@ export const Hero = () => {
                             <DropdownItem key="mobi">MOBI</DropdownItem>
                         </DropdownMenu>
                     </Dropdown>
-                    <Button size="lg" as={Link} href="/book" variant="solid" className="bg-book-orange text-white">
+                    <Button
+                        size="lg"
+                        as={Link}
+                        href="/book"
+                        variant="solid"
+                        className="bg-book-orange text-white font-semibold min-w-[200px]"
+                    >
                         Read Online
                     </Button>
                 </div>
