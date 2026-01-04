@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "This is also in the mind",
-  description: "In The Presence of Venerable Ñāṇavimala Mahāthera - A Disciple's Account, Kept Private for 25 Years",
+  description: "In The Presence of Venerable Ñāṇavimala Mahāthera - A Disciple's Training, Kept Private for 25 Years",
 };
 
 export default async function RootLayout({

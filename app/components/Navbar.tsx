@@ -18,7 +18,7 @@ export const AppNavbar = () => {
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
-                    <Link href="/#master" color="foreground" className="uppercase font-bold text-sm tracking-wide">
+                    <Link href="/master" color="foreground" className="uppercase font-bold text-sm tracking-wide">
                         The Master
                     </Link>
                 </NavbarItem>

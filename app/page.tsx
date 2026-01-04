@@ -23,8 +23,8 @@ export default function Home() {
         <MonkProfiles />
         <BookDescription />
         <BookExcerpt />
-        <BookDiscovery />
-        <BookChapters />
+        {/* <BookDiscovery />
+        <BookChapters /> */}
         <CTASection />
         <TrustSection />
         <Footer />

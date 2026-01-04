@@ -11,9 +11,9 @@ export const BookDiscovery = () => {
                         <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center mb-4 text-book-orange">
                             <FaDharmachakra className="text-2xl" />
                         </div>
-                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>Authentic Dhamma</h4>
+                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>Practical Dhamma</h4>
                         <p className={`text-gray-600 leading-relaxed text-sm ${figTree.className}`}>
-                            A direct transmission of the Buddha’s original words, rooted firmly in the Suttas and free from cultural dilutions.
+                            Teaching on finding complete peace through living with almost nothing. Wisdom from practice, not philosophy.
                         </p>
                     </div>
 
@@ -21,7 +21,7 @@ export const BookDiscovery = () => {
                         <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center mb-4 text-book-orange">
                             <FaLeaf className="text-2xl" />
                         </div>
-                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>Lived Practice</h4>
+                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>From Ethics to Liberation</h4>
                         <p className={`text-gray-600 leading-relaxed text-sm ${figTree.className}`}>
                             A complete guide on ethical living, facing attachments, and cultivating the mind for true liberation.
                         </p>
@@ -31,9 +31,9 @@ export const BookDiscovery = () => {
                         <div className="w-12 h-12 bg-orange-50 rounded-full flex items-center justify-center mb-4 text-book-orange">
                             <FaUserFriends className="text-2xl" />
                         </div>
-                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>A Noble Lineage</h4>
+                        <h4 className={`text-xl font-bold mb-3 text-gray-900 ${leagueSpartan.className}`}>Sixteen Years of Training</h4>
                         <p className={`text-gray-600 leading-relaxed text-sm ${figTree.className}`}>
-                            The inspiring journey of a disciple trained by a legendary forest monk who embodied the path of simplicity.
+                            The inspiring training of a disciple by an elusive solitary monk who embodied the path to freedom.
                         </p>
                     </div>
 
