@@ -22,8 +22,7 @@ export const Hero = () => {
                                     size="lg"
                                     variant="bordered"
                                     className="border-book-orange text-book-orange font-semibold min-w-[200px] bg-white/80 backdrop-blur-sm"
-                                    endContent={<MdOutlineKeyboardArrowDown className="text-xl" />}
-                                >
+                                    endContent={<MdOutlineKeyboardArrowDown className="text-xl" />}>
                                     Download Free
                                 </Button>
                             </DropdownTrigger>
