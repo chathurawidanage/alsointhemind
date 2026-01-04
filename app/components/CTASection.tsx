@@ -4,12 +4,12 @@ import { leagueSpartan, libreBaskerville } from "../fonts";
 
 export const CTASection = () => {
     return (
-        <div className="bg-[#1a1918] py-24 px-8 text-center border-t border-[#3e3b38]">
+        <div className="bg-white py-24 px-8 text-center border-t border-gray-100">
             <div className="max-w-[800px] mx-auto flex flex-col items-center gap-8">
-                <h2 className={`text-3xl md:text-5xl font-bold text-[#d5c4a1] ${leagueSpartan.className}`}>
+                <h2 className={`text-3xl md:text-5xl font-bold text-gray-900 ${leagueSpartan.className}`}>
                     Start Your Journey
                 </h2>
-                <p className={`text-gray-400 text-lg md:text-xl max-w-2xl leading-relaxed ${libreBaskerville.className}`}>
+                <p className={`text-gray-600 text-lg md:text-xl max-w-2xl leading-relaxed ${libreBaskerville.className}`}>
                     Download the book for free or read it online. Discover the path to true freedom as walked by a modern sage.
                 </p>
 

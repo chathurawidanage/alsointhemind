@@ -3,6 +3,7 @@
 import { HeroUIProvider } from "@heroui/react";
 import { AppNavbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
+import { TaglineSection } from "./components/TaglineSection";
 import { figTree } from "./fonts";
 import { BookDescription } from "./components/BookDescription";
 import { MonkProfiles } from "./components/MonkProfiles";
@@ -20,8 +21,9 @@ export default function Home() {
       <div className={"flex flex-col " + figTree.className}>
         <AppNavbar />
         <Hero />
-        <MonkProfiles />
+        <TaglineSection />
         <BookDescription />
+        <MonkProfiles />
         <BookExcerpt />
         {/* <BookDiscovery />
         <BookChapters /> */}
