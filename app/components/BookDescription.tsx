@@ -5,7 +5,7 @@ export const BookDescription = () => {
         <div className="flex flex-col">
             {/* Intro Section - White */}
             <div id="book-description" className="py-16 bg-gray-50 px-8 scroll-mt-16">
-                <h2 className={`text-4xl md:text-5xl font-bold mb-12 text-book-orange uppercase text-center max-w-[1024px] mx-auto ${leagueSpartan.className}`}>Inside the book</h2>
+                <h2 className={`text-4xl md:text-5xl font-bold mb-12 text-book-orange uppercase text-center max-w-[1280px] mx-auto ${leagueSpartan.className}`}>Inside the book</h2>
                 <div className="max-w-[800px] mx-auto">
                     <div className={`text-gray-600 text-lg leading-relaxed flex flex-col gap-6 text-center ${figTree.className}`}>
                         <p>

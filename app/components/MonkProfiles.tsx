@@ -11,7 +11,7 @@ export const MonkProfiles = () => {
             {/* Master Section */}
             <div id="master" className="py-20 px-4 bg-white text-center scroll-mt-16">
                 <h2 className={`text-3xl md:text-4xl tracking-widest text-book-orange uppercase mb-8 font-bold ${leagueSpartan.className}`}>The Master</h2>
-                <div className="max-w-[1024px] mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12">
+                <div className="max-w-[1280px] mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12">
                     {/* Mobile: Round Avatar */}
                     <Avatar
                         src={monk1.src}

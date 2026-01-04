@@ -6,7 +6,7 @@ import { Link } from "@heroui/react";
 export const TrustSection = () => {
     return (
         <div className="py-16 bg-gray-50 px-4">
-            <div className="max-w-[1024px] mx-auto flex flex-col items-center text-center gap-6">
+            <div className="max-w-[1280px] mx-auto flex flex-col items-center text-center gap-6">
                 <Image
                     src={ssmctLogo}
                     alt="Sri Sambuddha Mission Charitable Trust Logo"

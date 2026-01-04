@@ -14,7 +14,7 @@ export default function MasterPage() {
             <div className="flex flex-col min-h-screen">
                 <AppNavbar />
 
-                <div className="pt-32 pb-16 px-8 max-w-[1024px] mx-auto">
+                <div className="pt-32 pb-16 px-8 max-w-[1280px] mx-auto">
                     {/* Header / Bio Summary slightly repeated or expanded could go here, but focusing on requested content */}
                     <div className="flex flex-col items-center text-center mb-16">
                         <div className="w-48 h-48 md:w-64 md:h-64 relative mb-8 rounded-full overflow-hidden border-4 border-book-orange/20">

@@ -3,7 +3,7 @@ import { leagueSpartan, figTree } from "../fonts";
 export const BookChapters = () => {
     return (
         <div className="py-16 bg-white px-8">
-            <div className="max-w-[1024px] mx-auto">
+            <div className="max-w-[1280px] mx-auto">
                 <h3 className={`text-3xl font-bold mb-10 text-center text-gray-800 ${leagueSpartan.className}`}>Chapter Preview</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 px-4">
                     {[

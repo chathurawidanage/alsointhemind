@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const AppNavbar = () => {
     return (
-        <Navbar className="fixed w-full mx-auto" isBordered>
+        <Navbar className="fixed w-full mx-auto" isBordered maxWidth="xl">
             <NavbarBrand>
                 <Link href="/" color="foreground" className="flex items-center">
                     <div className="h-[50px] w-[50px] bg-gray-200 rounded-lg mr-2 flex items-center justify-center text-xs text-gray-400">Logo</div>
