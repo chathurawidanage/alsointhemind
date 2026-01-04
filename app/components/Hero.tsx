@@ -11,9 +11,9 @@ export const Hero = () => {
             <div className="relative z-10 px-6 mx-auto flex flex-col-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16 max-w-[1240px]" >
                 <div className="flex flex-col gap-4 max-w-[800px] flex-shrink-0">
                     <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center lg:text-left ${leagueSpartan.className}`}>This is also</h1>
-                    <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center lg:text-left ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
+                    <h2 className={`text-xl sm:text-2xl font-bold text-title-gray text-center lg:text-left ${libreBaskerville.className}`}>In The Presence of Venerable Ñāṇavimala Mahāthera</h2>
                     <h1 className={`text-5xl sm:text-7xl md:text-8xl font-bold text-book-orange uppercase text-center lg:text-left ${leagueSpartan.className}`}>in the mind</h1>
-                    <h2 className={`text-l sm:text-2xl font-bold text-title-gray text-center lg:text-left ${libreBaskerville.className}`}>A Disciple’s Training, Kept Private for 25 Years</h2>
+                    <h2 className={`text-xl sm:text-2xl font-bold text-title-gray text-center lg:text-left ${libreBaskerville.className}`}>A Disciple’s Training, Kept Private for 25 Years</h2>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start mt-8 lg:mt-10 w-full sm:w-auto">
                         <Dropdown>
