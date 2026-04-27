@@ -1,0 +1,25 @@
+import { BookChapterCard } from '../components/BookChapterCard'
+import { LuBookOpen, LuArrowRight } from 'react-icons/lu'
+
+# Also in the Mind
+
+<div className="grid grid-cols-1 gap-4 mt-8">
+  <BookChapterCard
+    icon={<LuBookOpen />}
+    title="Forward"
+    href="/book/forward"
+    description="Reflections by Venerable Bambalapitiye Gnanaloka Thera."
+  />
+  <BookChapterCard
+    icon={<LuArrowRight />}
+    title="Introduction"
+    href="/book/introduction"
+    description="The story of Venerable Ñāṇavimala and the origin of this book."
+  />
+  <BookChapterCard
+    icon={<LuArrowRight />}
+    title="Chapter 1"
+    href="/book/chapter1"
+    description="The first chapter of the book."
+  />
+</div>
