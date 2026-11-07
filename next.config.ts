@@ -7,7 +7,20 @@ const withNextra = nextra({
 
 
 const nextConfig: NextConfig = withNextra({
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/book/introduction',
+        destination: '/book/before-it-was-too-late',
+        permanent: true,
+      },
+      {
+        source: '/book/forward',
+        destination: '/book/foreword',
+        permanent: true,
+      },
+    ];
+  },
 });
 
 export default nextConfig;

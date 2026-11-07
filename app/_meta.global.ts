@@ -6,11 +6,11 @@ const meta = {
     },
     book: {
         items: {
-            forward: {
-                title: "Forward",
+            foreword: {
+                title: "Foreword",
             },
-            introduction: {
-                title: "Introduction",
+            'before-it-was-too-late': {
+                title: "Before It Was Too Late",
             },
             chapter1: {
                 title: "Chapter 1",
