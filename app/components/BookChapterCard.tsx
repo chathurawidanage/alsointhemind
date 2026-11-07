@@ -1,7 +1,8 @@
 "use client";
 
-import { Card, CardHeader, CardBody, Link } from "@heroui/react";
+import Link from "next/link";
 import React from "react";
+import { leagueSpartan, figTree } from "../fonts";
 
 interface BookChapterCardProps {
     title: string;
@@ -12,20 +13,24 @@ interface BookChapterCardProps {
 
 export const BookChapterCard = ({ title, description, href, icon }: BookChapterCardProps) => {
     return (
-        <Link href={href} className="w-full">
-            <Card className="w-full h-full hover:scale-[1.02] transition-transform cursor-pointer border border-transparent hover:border-book-orange/20">
-                <CardHeader className="flex gap-3 px-6 pt-6">
+        <Link href={href} className="w-full block group no-underline text-inherit">
+            <div className="w-full p-6 rounded-2xl bg-white dark:bg-[#1a1918] border border-gray-200/80 dark:border-neutral-800 shadow-xs hover:border-book-orange/60 dark:hover:border-book-orange/60 hover:shadow-md transition-all">
+                <div className="flex gap-4 items-start">
                     {icon && (
-                        <div className="text-2xl text-book-orange">
+                        <div className="text-2xl text-book-orange shrink-0 mt-0.5">
                             {icon}
                         </div>
                     )}
-                    <h3 className="text-xl font-bold font-league-spartan">{title}</h3>
-                </CardHeader>
-                <CardBody className="px-6 pb-6 pt-0">
-                    <p className="text-gray-600 font-figtree">{description}</p>
-                </CardBody>
-            </Card>
+                    <div>
+                        <h3 className={`text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-book-orange transition-colors ${leagueSpartan.className}`}>
+                            {title}
+                        </h3>
+                        <p className={`text-gray-600 dark:text-neutral-400 mt-1 text-sm sm:text-base leading-relaxed ${figTree.className}`}>
+                            {description}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </Link>
     );
 };

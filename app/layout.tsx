@@ -39,7 +39,7 @@ export default async function RootLayout({
       suppressHydrationWarning>
       <Head></Head>
       <body
-        className={`${figTree.className} antialiased text-gray-800 bg-white`}>
+        className={`${figTree.className} antialiased bg-white dark:bg-[#111111] text-gray-800 dark:text-gray-100`}>
 
         {children}
       </body>

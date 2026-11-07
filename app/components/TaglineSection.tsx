@@ -3,7 +3,7 @@ import { FaQuoteLeft } from "react-icons/fa";
 
 export const TaglineSection = () => {
     return (
-        <section className="bg-white py-16 sm:py-20 border-b border-gray-100">
+        <section className="py-16 sm:py-20 bg-gray-50/70 border-b border-gray-100">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-12">
                 {/* Canonical Epigraph */}
                 <div className="text-center">

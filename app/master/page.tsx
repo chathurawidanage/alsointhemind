@@ -25,7 +25,7 @@ export default function MasterPage() {
                             />
                         </div>
                         <h1 className={`text-4xl md:text-6xl font-bold text-book-orange mb-6 ${leagueSpartan.className}`}>
-                            Venerable Ñāṇavimala Mahāthera
+                            Venerable Ñā<span className="diacritic-subdot">n</span>avimala Mahāthera
                         </h1>
                         <Link
                             href="https://srisambuddhamission.org/venerable-na%E1%B9%87avimala-mahathera-a-life-of-renunciation-and-wisdom/"

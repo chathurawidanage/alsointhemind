@@ -27,7 +27,7 @@ export const MonkProfiles = () => {
                                 The Master
                             </span>
                             <h2 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-gray-900 tracking-tight ${leagueSpartan.className}`}>
-                                Venerable Ñāṇavimala Mahāthera
+                                Venerable Ñā<span className="diacritic-subdot">n</span>avimala Mahāthera
                             </h2>
 
                             <div className={`text-gray-600 text-base sm:text-lg space-y-5 leading-relaxed ${figTree.className}`}>

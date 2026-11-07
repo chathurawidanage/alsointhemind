@@ -26,7 +26,7 @@ export const WordsFromMasters = () => {
                             </p>
                         </div>
                         <div className="pt-4 border-t border-gray-200/60">
-                            <h5 className={`font-bold text-gray-900 text-base ${leagueSpartan.className}`}>Ven. Katukurunde Ñāṇananda</h5>
+                            <h5 className={`font-bold text-gray-900 text-base ${leagueSpartan.className}`}>Ven. Katukurunde Ñā<span className="diacritic-subdot">n</span>ananda</h5>
                             <p className={`text-xs text-gray-500 ${figTree.className}`}>Renowned Scholar &amp; Author of Concept and Reality</p>
                         </div>
                     </div>

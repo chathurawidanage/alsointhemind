@@ -18,6 +18,15 @@ html {
   scroll-behavior: smooth;
 }
 
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #111111;
+  color: #f3f4f6;
+}
+
 article {
   font-size: var(--book-font-size, 1.125rem);
   line-height: 1.75;
@@ -37,6 +46,27 @@ article {
   100% {
     transform: translateY(0px);
   }
+}
+
+.diacritic-subdot {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+.diacritic-subdot::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.05em;
+  width: 0.16em;
+  height: 0.16em;
+  border-radius: 50%;
+  background-color: currentColor;
 }
 
 .animate-float {

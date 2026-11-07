@@ -44,10 +44,10 @@ export function FontSizeControl() {
     <div
       role="group"
       aria-label="Adjust book font size"
-      className="flex items-center gap-1 rounded-full border border-neutral-200 dark:border-neutral-700 bg-neutral-100/90 dark:bg-neutral-800/90 p-0.5 text-xs backdrop-blur-sm"
+      className="flex items-center h-[34px] px-1.5 gap-1 rounded-lg bg-black/[.05] dark:bg-gray-50/10 border border-black/5 dark:border-white/5 text-xs transition-all"
     >
       <div
-        className="flex items-center px-1.5 text-neutral-500 dark:text-neutral-400 select-none"
+        className="flex items-center px-1 text-gray-500 dark:text-gray-400 select-none"
         title="Reading font size"
       >
         <LuType className="w-3.5 h-3.5" aria-hidden="true" />
@@ -63,10 +63,10 @@ export function FontSizeControl() {
               title={size.title}
               aria-label={size.title}
               aria-pressed={isActive}
-              className={`min-w-6 h-6 px-1.5 rounded-full transition-all text-[11px] flex items-center justify-center cursor-pointer select-none ${
+              className={`min-w-[22px] h-[22px] px-1.5 rounded-md transition-all text-xs flex items-center justify-center cursor-pointer select-none font-medium ${
                 isActive
                   ? "bg-book-orange text-white shadow-xs font-semibold"
-                  : "text-neutral-600 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70"
+                  : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10"
               }`}
             >
               {size.label}
@@ -77,4 +77,3 @@ export function FontSizeControl() {
     </div>
   );
 }
-
