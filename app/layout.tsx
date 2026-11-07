@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { figTree } from "./fonts";
+import { figTree, libreBaskerville } from "./fonts";
 import "./globals.css";
 import { Head } from "nextra/components";
 
@@ -39,7 +39,7 @@ export default async function RootLayout({
       suppressHydrationWarning>
       <Head></Head>
       <body
-        className={`${figTree.className} antialiased bg-white dark:bg-[#111111] text-gray-800 dark:text-gray-100`}>
+        className={`${figTree.className} ${libreBaskerville.variable} antialiased bg-white dark:bg-[#111111] text-gray-800 dark:text-gray-100`}>
 
         {children}
       </body>

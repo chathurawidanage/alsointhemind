@@ -10,6 +10,7 @@ export const libreBaskerville = Libre_Baskerville({
     style: ["normal", "italic"],
     subsets: ["latin", "latin-ext"],
     display: "swap",
+    variable: "--font-libre-baskerville",
 });
 
 export const figTree = Figtree({

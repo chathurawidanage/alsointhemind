@@ -34,6 +34,34 @@ article {
   transition: font-size 0.15s ease-out;
 }
 
+article blockquote {
+  font-family: var(--font-libre-baskerville), Georgia, Cambria, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.05em;
+  line-height: 1.75;
+  border-left: 3.5px solid #ff751f !important;
+  background-color: rgba(255, 117, 31, 0.05);
+  padding: 0.85rem 1.25rem 0.85rem 1.4rem !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: #1f2937 !important;
+}
+
+html.dark article blockquote {
+  background-color: rgba(255, 117, 31, 0.07);
+  color: #f3f4f6 !important;
+  border-left-color: #ff751f !important;
+}
+
+article blockquote p {
+  margin: 0 !important;
+  color: inherit !important;
+}
+
+article blockquote p + p {
+  margin-top: 0.75rem !important;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
