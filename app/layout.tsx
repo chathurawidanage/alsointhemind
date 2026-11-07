@@ -37,7 +37,13 @@ export default async function RootLayout({
     <html lang="en"
       dir="ltr"
       suppressHydrationWarning>
-      <Head></Head>
+      <Head>
+        <script
+          defer
+          src="https://analytics.srisambuddhamission.org/script.js"
+          data-website-id="5c213187-77fe-4ba2-a614-a596bb19dd6c"
+        />
+      </Head>
       <body
         className={`${figTree.className} ${libreBaskerville.variable} antialiased bg-white dark:bg-[#111111] text-gray-800 dark:text-gray-100`}>
 

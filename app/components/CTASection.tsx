@@ -29,6 +29,8 @@ export const CTASection = () => {
                         variant="bordered"
                         className="border-book-orange text-book-orange font-semibold min-w-[200px] hover:bg-orange-50/50 transition-colors"
                         startContent={<LuDownload className="text-xl" />}
+                        data-umami-event="download-pdf"
+                        data-umami-event-location="cta-section"
                     >
                         Download Free PDF
                     </Button>
@@ -39,6 +41,8 @@ export const CTASection = () => {
                         href="/book"
                         variant="solid"
                         className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
+                        data-umami-event="read-online"
+                        data-umami-event-location="cta-section"
                     >
                         Read Online
                     </Button>

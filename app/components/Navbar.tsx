@@ -63,6 +63,8 @@ export const AppNavbar = () => {
                             color="foreground"
                             href={item.href}
                             className="text-xs uppercase font-bold tracking-[0.15em] text-gray-600 hover:text-book-orange transition-colors"
+                            data-umami-event="nav-click"
+                            data-umami-event-target={item.label}
                         >
                             {item.label}
                         </Link>
@@ -78,6 +80,8 @@ export const AppNavbar = () => {
                         className="bg-book-orange text-white font-semibold text-sm px-5 py-2 shadow-sm hover:bg-[#e06213] transition-colors"
                         href="/book"
                         variant="solid"
+                        data-umami-event="read-online"
+                        data-umami-event-location="navbar"
                     >
                         Read Online
                     </Button>
@@ -91,6 +95,8 @@ export const AppNavbar = () => {
                             className="w-full text-base font-semibold text-gray-800 hover:text-book-orange py-2"
                             href={item.href}
                             onPress={() => setIsMenuOpen(false)}
+                            data-umami-event="nav-click"
+                            data-umami-event-target={item.label}
                         >
                             {item.label}
                         </Link>
@@ -102,6 +108,8 @@ export const AppNavbar = () => {
                         href="/book"
                         className="w-full bg-book-orange text-white font-semibold"
                         onPress={() => setIsMenuOpen(false)}
+                        data-umami-event="read-online"
+                        data-umami-event-location="navbar-mobile"
                     >
                         Read Online
                     </Button>

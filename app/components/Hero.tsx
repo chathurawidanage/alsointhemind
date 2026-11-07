@@ -44,6 +44,8 @@ export const Hero = () => {
                             variant="bordered"
                             className="border-book-orange text-book-orange font-semibold min-w-[200px] bg-white/90 backdrop-blur-sm hover:bg-orange-50/50 transition-colors"
                             startContent={<LuDownload className="text-xl" />}
+                            data-umami-event="download-pdf"
+                            data-umami-event-location="hero"
                         >
                             Download Free PDF
                         </Button>
@@ -54,6 +56,8 @@ export const Hero = () => {
                             href="/book"
                             variant="solid"
                             className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
+                            data-umami-event="read-online"
+                            data-umami-event-location="hero"
                         >
                             Read Online
                         </Button>

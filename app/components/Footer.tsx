@@ -28,7 +28,12 @@ export const Footer = () => {
                         <Link href="/#book-description" className="hover:text-book-orange transition-colors">
                             The Book
                         </Link>
-                        <Link href="/book" className="hover:text-book-orange transition-colors text-book-orange">
+                        <Link
+                            href="/book"
+                            className="hover:text-book-orange transition-colors text-book-orange"
+                            data-umami-event="read-online"
+                            data-umami-event-location="footer"
+                        >
                             Read Online
                         </Link>
                     </nav>
@@ -50,6 +55,8 @@ export const Footer = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`flex items-center gap-2 text-gray-400 hover:text-book-orange transition-colors ${figTree.className}`}
+                        data-umami-event="external-link"
+                        data-umami-event-target="ssmct-website"
                     >
                         <FaGlobe className="text-book-orange" />
                         <span>srisambuddhamission.org</span>

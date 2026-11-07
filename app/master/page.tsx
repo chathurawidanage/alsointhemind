@@ -32,6 +32,8 @@ export default function MasterPage() {
                             isExternal
                             showAnchorIcon
                             className="text-lg text-gray-600 hover:text-book-orange transition-colors"
+                            data-umami-event="external-link"
+                            data-umami-event-target="master-biography"
                         >
                             Read Full Biography
                         </Link>

@@ -58,6 +58,8 @@ export const BookChapters = () => {
                             <Link
                                 href="/book"
                                 className="text-xs uppercase font-bold tracking-wider text-book-orange hover:text-[#e06213] transition-colors"
+                                data-umami-event="read-online"
+                                data-umami-event-location="chapters-appendices"
                             >
                                 Read Online &rarr;
                             </Link>
@@ -103,6 +105,8 @@ export const BookChapters = () => {
                     <Link
                         href="/book"
                         className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-book-orange hover:text-[#e06213] transition-colors"
+                        data-umami-event="read-online"
+                        data-umami-event-location="chapters-bottom"
                     >
                         Read the complete book online &rarr;
                     </Link>

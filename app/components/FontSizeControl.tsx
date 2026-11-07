@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { LuType } from "react-icons/lu";
+import { trackEvent } from "@/lib/analytics";
 
 export const FONT_SIZES = [
   { label: "S", value: "0.95rem", title: "Small text" },
@@ -38,6 +39,7 @@ export function FontSizeControl({ className = "" }: { className?: string }) {
     setCurrentIndex(index);
     document.documentElement.style.setProperty("--book-font-size", FONT_SIZES[index].value);
     localStorage.setItem(STORAGE_KEY, String(index));
+    trackEvent("change-font-size", { size: FONT_SIZES[index].label });
   };
 
   return (
@@ -64,6 +66,8 @@ export function FontSizeControl({ className = "" }: { className?: string }) {
               title={size.title}
               aria-label={size.title}
               aria-pressed={isActive}
+              data-umami-event="change-font-size"
+              data-umami-event-size={size.label}
               className={`min-w-[26px] md:min-w-[22px] h-[26px] md:h-[22px] px-2 md:px-1.5 rounded-md transition-all text-xs flex items-center justify-center cursor-pointer select-none font-medium ${
                 isActive
                   ? "bg-book-orange text-white shadow-xs font-semibold"

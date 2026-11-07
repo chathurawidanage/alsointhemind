@@ -53,6 +53,8 @@ export const MonkProfiles = () => {
                                     <Link
                                         href="/master"
                                         className="text-gray-600 hover:text-book-orange font-medium underline decoration-gray-300 hover:decoration-book-orange underline-offset-4 transition-all text-base inline-flex items-center gap-1"
+                                        data-umami-event="view-master"
+                                        data-umami-event-location="monk-profiles"
                                     >
                                         Read more about the Master &rarr;
                                     </Link>
@@ -97,6 +99,8 @@ export const MonkProfiles = () => {
                                     isExternal
                                     showAnchorIcon
                                     className="text-gray-600 hover:text-book-orange font-medium underline decoration-gray-300 hover:decoration-book-orange underline-offset-4 transition-all text-base inline-flex items-center gap-1"
+                                    data-umami-event="external-link"
+                                    data-umami-event-target="disciple-srisambuddhamission"
                                 >
                                     Read more about the Disciple
                                 </Link>

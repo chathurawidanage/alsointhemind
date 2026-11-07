@@ -58,6 +58,8 @@ export const BookExcerpt = () => {
                     <Link
                         href="/book"
                         className="text-sm font-semibold text-book-orange hover:text-orange-300 transition-colors inline-flex items-center gap-1"
+                        data-umami-event="read-online"
+                        data-umami-event-location="excerpt"
                     >
                         Read the full book online &rarr;
                     </Link>

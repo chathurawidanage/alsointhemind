@@ -40,6 +40,8 @@ export const TrustSection = () => {
                             href="mailto:info@srisambuddhamission.org"
                             color="foreground"
                             className="text-xs sm:text-sm hover:text-book-orange transition-colors"
+                            data-umami-event="contact-click"
+                            data-umami-event-method="email"
                         >
                             info@srisambuddhamission.org
                         </Link>
@@ -48,6 +50,8 @@ export const TrustSection = () => {
                             href="tel:+94777586808"
                             color="foreground"
                             className="text-xs sm:text-sm hover:text-book-orange transition-colors"
+                            data-umami-event="contact-click"
+                            data-umami-event-method="phone"
                         >
                             +94 777 586 808
                         </Link>
