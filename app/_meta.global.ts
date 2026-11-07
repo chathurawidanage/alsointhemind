@@ -4,8 +4,17 @@ const meta = {
         type: 'page',
         display: 'hidden'
     },
+    master: {
+        type: 'page',
+        display: 'hidden'
+    },
     book: {
         items: {
+            '*': {
+                theme: {
+                    breadcrumb: false
+                }
+            },
             foreword: {
                 title: "Foreword",
             },

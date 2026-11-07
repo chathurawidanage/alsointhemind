@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind"
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
+    "generate:icons": "python3 scripts/generate-icons.py"
   },
   "dependencies": {
     "@heroui/react": "^2.8.10",

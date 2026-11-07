@@ -13,7 +13,7 @@ import {
     Button
 } from "@heroui/react";
 import Image from "next/image";
-import websiteLogo from "../../public/logo.png";
+import websiteLogo from "../../public/logo_full_3.png";
 import { leagueSpartan } from "../fonts";
 
 export const AppNavbar = () => {
@@ -33,11 +33,7 @@ export const AppNavbar = () => {
             maxWidth="xl"
             isBordered
         >
-            <NavbarContent>
-                <NavbarMenuToggle
-                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                    className="sm:hidden"
-                />
+            <NavbarContent justify="start">
                 <NavbarBrand>
                     <Link href="/" color="foreground" className="flex items-center gap-3">
                         <div className="relative w-10 h-10 shrink-0">
@@ -73,7 +69,7 @@ export const AppNavbar = () => {
             </NavbarContent>
 
             <NavbarContent justify="end">
-                <NavbarItem>
+                <NavbarItem className="hidden sm:flex">
                     <Button
                         as={Link}
                         color="default"
@@ -86,6 +82,10 @@ export const AppNavbar = () => {
                         Read Online
                     </Button>
                 </NavbarItem>
+                <NavbarMenuToggle
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    className="sm:hidden"
+                />
             </NavbarContent>
 
             <NavbarMenu className="bg-white/95 backdrop-blur-md pt-6 gap-4">

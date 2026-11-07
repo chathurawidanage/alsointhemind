@@ -4,7 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import { Footer } from "../components/Footer";
 import { FontSizeControl } from "../components/FontSizeControl";
 import Image from "next/image";
-import websiteLogo from "../../public/logo.png";
+import websiteLogo from "../../public/logo_full_3.png";
 import { leagueSpartan } from "../fonts";
 
 const navbar = (
@@ -51,7 +51,7 @@ export default async function BookLayout({
       <Layout
         navbar={navbar}
         search={searchControls}
-        pageMap={await getPageMap()}
+        pageMap={await getPageMap("/book")}
         editLink={null}
         feedback={{ content: null }}
         copyPageButton={false}
