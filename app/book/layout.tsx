@@ -1,4 +1,5 @@
 import { Layout, Navbar } from "nextra-theme-docs";
+import { Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import { Footer } from "../components/Footer";
 import { FontSizeControl } from "../components/FontSizeControl";
@@ -25,9 +26,14 @@ const navbar = (
         </span>
       </div>
     }
-  >
+  />
+);
+
+const searchControls = (
+  <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2.5 w-full">
+    <Search />
     <FontSizeControl />
-  </Navbar>
+  </div>
 );
 
 export default async function BookLayout({
@@ -44,6 +50,7 @@ export default async function BookLayout({
       />
       <Layout
         navbar={navbar}
+        search={searchControls}
         pageMap={await getPageMap()}
         editLink={null}
         feedback={{ content: null }}

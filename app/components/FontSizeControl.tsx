@@ -13,7 +13,7 @@ export const FONT_SIZES = [
 const STORAGE_KEY = "book-font-size-index";
 const DEFAULT_INDEX = 1; // "M" (1.125rem)
 
-export function FontSizeControl() {
+export function FontSizeControl({ className = "" }: { className?: string }) {
   const mounted = useSyncExternalStore(
     () => () => {},
     () => true,
@@ -44,15 +44,16 @@ export function FontSizeControl() {
     <div
       role="group"
       aria-label="Adjust book font size"
-      className="flex items-center h-[34px] px-1.5 gap-1 rounded-lg bg-black/[.05] dark:bg-gray-50/10 border border-black/5 dark:border-white/5 text-xs transition-all"
+      className={`flex items-center justify-between md:justify-start h-[36px] md:h-[34px] px-2 md:px-1.5 gap-1 rounded-lg bg-black/[.05] dark:bg-gray-50/10 border border-black/5 dark:border-white/5 text-xs transition-all w-full md:w-auto ${className}`}
     >
       <div
-        className="flex items-center px-1 text-gray-500 dark:text-gray-400 select-none"
+        className="flex items-center gap-1.5 px-1 text-gray-500 dark:text-gray-400 select-none"
         title="Reading font size"
       >
         <LuType className="w-3.5 h-3.5" aria-hidden="true" />
+        <span className="md:hidden text-[11px] font-medium text-gray-500 dark:text-gray-400">Text Size</span>
       </div>
-      <div className="flex items-center gap-0.5">
+      <div className="flex items-center gap-1 md:gap-0.5">
         {FONT_SIZES.map((size, idx) => {
           const isActive = mounted && currentIndex === idx;
           return (
@@ -63,7 +64,7 @@ export function FontSizeControl() {
               title={size.title}
               aria-label={size.title}
               aria-pressed={isActive}
-              className={`min-w-[22px] h-[22px] px-1.5 rounded-md transition-all text-xs flex items-center justify-center cursor-pointer select-none font-medium ${
+              className={`min-w-[26px] md:min-w-[22px] h-[26px] md:h-[22px] px-2 md:px-1.5 rounded-md transition-all text-xs flex items-center justify-center cursor-pointer select-none font-medium ${
                 isActive
                   ? "bg-book-orange text-white shadow-xs font-semibold"
                   : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10"
