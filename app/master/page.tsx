@@ -11,13 +11,12 @@ import monk1 from "../../public/monk1.jpg";
 export default function MasterPage() {
     return (
         <HeroUIProvider>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen bg-white">
                 <AppNavbar />
 
-                <div className="pt-32 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header / Bio Summary slightly repeated or expanded could go here, but focusing on requested content */}
+                <div className="pt-32 pb-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col items-center text-center mb-16">
-                        <div className="w-48 h-48 md:w-64 md:h-64 relative mb-8 rounded-full overflow-hidden border-4 border-book-orange/20">
+                        <div className="w-48 h-48 md:w-64 md:h-64 relative mb-8 rounded-full overflow-hidden border-4 border-book-orange/20 shadow-xl">
                             <Image
                                 src={monk1}
                                 alt="Venerable Ñāṇavimala Mahāthera"
@@ -38,19 +37,19 @@ export default function MasterPage() {
                         </Link>
                     </div>
 
-                    <div className="mb-20">
-                        <h2 className={`text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center uppercase tracking-wider ${leagueSpartan.className}`}>
+                    <div className="mb-4">
+                        <h2 className={`text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center uppercase tracking-wider ${leagueSpartan.className}`}>
                             What Others Have Written
                         </h2>
                         <div className={`text-lg md:text-xl text-gray-600 leading-relaxed text-center max-w-3xl mx-auto space-y-6 ${libreBaskerville.className}`}>
                             <p>
-                                After Venerable Ñāṇavimala&apos;s passing, those who knew him gathered their memories in a book called &ldquo;Pure Inspiration.&rdquo; Their words paint a picture of a man who lived what he taught— with unwavering discipline, and a rigor that demanded nothing less than complete sincerity, with compassion that extended to all beings. Here are some of their reflections:
+                                After Venerable Ñāṇavimala&apos;s passing, those who knew him gathered their memories in a book called &ldquo;Pure Inspiration.&rdquo; Their words paint a picture of a man who lived what he taught—with unwavering discipline, and a rigor that demanded nothing less than complete sincerity, with compassion that extended to all beings.
                             </p>
                         </div>
                     </div>
-
-                    <WordsFromMasters />
                 </div>
+
+                <WordsFromMasters />
 
                 <Footer />
             </div>
