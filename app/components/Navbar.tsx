@@ -13,7 +13,7 @@ import {
     Button
 } from "@heroui/react";
 import Image from "next/image";
-import websiteLogo from "../../public/logo_full_3.png";
+import websiteLogo from "../../public/logo_full_4.png";
 import { leagueSpartan } from "../fonts";
 
 export const AppNavbar = () => {

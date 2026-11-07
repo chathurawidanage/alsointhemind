@@ -4,7 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import { Footer } from "../components/Footer";
 import { FontSizeControl } from "../components/FontSizeControl";
 import Image from "next/image";
-import websiteLogo from "../../public/logo_full_3.png";
+import websiteLogo from "../../public/logo_full_4.png";
 import { leagueSpartan } from "../fonts";
 
 const navbar = (
