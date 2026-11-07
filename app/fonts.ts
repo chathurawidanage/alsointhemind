@@ -2,14 +2,18 @@ import { League_Spartan, Libre_Baskerville, Figtree } from "next/font/google";
 
 export const leagueSpartan = League_Spartan({
     subsets: ["latin"],
+    display: "swap",
 });
 
 export const libreBaskerville = Libre_Baskerville({
-    weight: ["400"],
+    weight: ["400", "700"],
+    style: ["normal", "italic"],
     subsets: ["latin"],
+    display: "swap",
 });
 
 export const figTree = Figtree({
-    weight: ["400"],
     subsets: ["latin"],
+    display: "swap",
 });
+

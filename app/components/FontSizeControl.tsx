@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { LuType } from "react-icons/lu";
 
 export const FONT_SIZES = [
@@ -14,22 +14,25 @@ const STORAGE_KEY = "book-font-size-index";
 const DEFAULT_INDEX = 1; // "M" (1.125rem)
 
 export function FontSizeControl() {
-  const [mounted, setMounted] = useState(false);
-  const [currentIndex, setCurrentIndex] = useState(DEFAULT_INDEX);
+  const mounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  );
 
-  useEffect(() => {
-    setMounted(true);
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    if (typeof window === "undefined") return DEFAULT_INDEX;
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved !== null) {
       const idx = Number(saved);
-      if (idx >= 0 && idx < FONT_SIZES.length) {
-        setCurrentIndex(idx);
-        document.documentElement.style.setProperty("--book-font-size", FONT_SIZES[idx].value);
-        return;
-      }
+      if (idx >= 0 && idx < FONT_SIZES.length) return idx;
     }
-    document.documentElement.style.setProperty("--book-font-size", FONT_SIZES[DEFAULT_INDEX].value);
-  }, []);
+    return DEFAULT_INDEX;
+  });
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--book-font-size", FONT_SIZES[currentIndex].value);
+  }, [currentIndex]);
 
   const setSize = (index: number) => {
     setCurrentIndex(index);

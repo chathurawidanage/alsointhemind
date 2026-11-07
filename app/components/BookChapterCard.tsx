@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, CardHeader, CardBody, CardFooter, Link } from "@heroui/react";
+import { Card, CardHeader, CardBody, Link } from "@heroui/react";
 import React from "react";
 
 interface BookChapterCardProps {
