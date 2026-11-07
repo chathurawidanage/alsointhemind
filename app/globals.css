@@ -18,6 +18,13 @@ html {
   scroll-behavior: smooth;
 }
 
+article {
+  font-size: var(--book-font-size, 1.125rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+  transition: font-size 0.15s ease-out;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0px);
