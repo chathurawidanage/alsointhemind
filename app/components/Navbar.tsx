@@ -13,7 +13,7 @@ import {
     Button
 } from "@heroui/react";
 import Image from "next/image";
-import ssmctLogo from "../../public/ssmct.png";
+import websiteLogo from "../../public/logo.png";
 import { leagueSpartan } from "../fonts";
 
 export const AppNavbar = () => {
@@ -42,8 +42,8 @@ export const AppNavbar = () => {
                     <Link href="/" color="foreground" className="flex items-center gap-3">
                         <div className="relative w-10 h-10 shrink-0">
                             <Image
-                                src={ssmctLogo}
-                                alt="Sri Sambuddha Mission Logo"
+                                src={websiteLogo}
+                                alt="This Is Also in the Mind Logo"
                                 fill
                                 sizes="40px"
                                 className="object-contain"

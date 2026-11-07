@@ -4,7 +4,7 @@ import { getPageMap } from "nextra/page-map";
 import { Footer } from "../components/Footer";
 import { FontSizeControl } from "../components/FontSizeControl";
 import Image from "next/image";
-import ssmctLogo from "../../public/ssmct.png";
+import websiteLogo from "../../public/logo.png";
 import { leagueSpartan } from "../fonts";
 
 const navbar = (
@@ -14,8 +14,8 @@ const navbar = (
       <div className="flex items-center gap-2.5">
         <div className="relative w-8 h-8 shrink-0">
           <Image
-            src={ssmctLogo}
-            alt="Sri Sambuddha Mission Logo"
+            src={websiteLogo}
+            alt="This Is Also in the Mind Logo"
             fill
             sizes="32px"
             className="object-contain"
