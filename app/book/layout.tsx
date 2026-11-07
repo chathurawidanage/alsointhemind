@@ -1,18 +1,40 @@
-import { Banner } from "nextra/components";
-import { Footer, Layout, Navbar } from "nextra-theme-docs";
+import { Layout, Navbar } from "nextra-theme-docs";
+import { Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
-import 'nextra-theme-docs/style.css'
+import { Footer } from "../components/Footer";
+import { FontSizeControl } from "../components/FontSizeControl";
+import Image from "next/image";
+import ssmctLogo from "../../public/ssmct.png";
+import { leagueSpartan } from "../fonts";
 
-
-
-const banner = <Banner storageKey="some-key">Nextra 4.0 is released 🎉</Banner>
 const navbar = (
   <Navbar
-    logo={<b>Nextra</b>}
-  // ... Your additional navbar options
+    logoLink="/"
+    logo={
+      <div className="flex items-center gap-2.5">
+        <div className="relative w-8 h-8 shrink-0">
+          <Image
+            src={ssmctLogo}
+            alt="Sri Sambuddha Mission Logo"
+            fill
+            sizes="32px"
+            className="object-contain"
+          />
+        </div>
+        <span className={`font-bold text-base sm:text-lg tracking-tight text-gray-900 dark:text-white ${leagueSpartan.className}`}>
+          Also in the Mind
+        </span>
+      </div>
+    }
   />
-)
-const footer = <Footer>MIT {new Date().getFullYear()} © Nextra.</Footer>
+);
+
+const searchControls = (
+  <div className="flex flex-col md:flex-row items-stretch md:items-center gap-2.5 w-full">
+    <Search />
+    <FontSizeControl />
+  </div>
+);
 
 export default async function BookLayout({
   children,
@@ -20,14 +42,25 @@ export default async function BookLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Layout
-      banner={banner}
-      navbar={navbar}
-      pageMap={await getPageMap()}
-      docsRepositoryBase="https://github.com/shuding/nextra/tree/main/docs"
-      footer={footer}
-    >
-      {children}
-    </Layout>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `try{const i=localStorage.getItem("book-font-size-index");if(i!==null){const s=["0.95rem","1.125rem","1.25rem","1.4rem"][i];if(s)document.documentElement.style.setProperty("--book-font-size",s);}}catch(e){}`,
+        }}
+      />
+      <Layout
+        navbar={navbar}
+        search={searchControls}
+        pageMap={await getPageMap()}
+        editLink={null}
+        feedback={{ content: null }}
+        copyPageButton={false}
+        sidebar={{ defaultMenuCollapseLevel: 1, defaultOpen: true }}
+        toc={{ title: "Contents", backToTop: "Back to top" }}
+        footer={<Footer />}
+      >
+        {children}
+      </Layout>
+    </>
   );
 }

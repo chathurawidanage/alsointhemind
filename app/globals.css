@@ -1,28 +1,102 @@
+@import 'nextra-theme-docs/style.css';
 @import "tailwindcss";
+@source '../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@plugin '../hero.ts';
+
+@source inline('aspect-video');
+@source inline('py-10');
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
   --color-book-orange: #ff751f;
   --color-title-gray: #1c293a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #111111;
+  color: #f3f4f6;
+}
+
+article {
+  font-size: var(--book-font-size, 1.125rem);
+  line-height: 1.75;
+  text-wrap: pretty;
+  transition: font-size 0.15s ease-out;
+}
+
+article blockquote {
+  font-family: var(--font-libre-baskerville), Georgia, Cambria, 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 1.05em;
+  line-height: 1.75;
+  border-left: 3.5px solid #ff751f !important;
+  background-color: rgba(255, 117, 31, 0.05);
+  padding: 0.85rem 1.25rem 0.85rem 1.4rem !important;
+  margin: 1.5rem 0 !important;
+  border-radius: 0 0.75rem 0.75rem 0;
+  color: #1f2937 !important;
+}
+
+html.dark article blockquote {
+  background-color: rgba(255, 117, 31, 0.07);
+  color: #f3f4f6 !important;
+  border-left-color: #ff751f !important;
+}
+
+article blockquote p {
+  margin: 0 !important;
+  color: inherit !important;
+}
+
+article blockquote p + p {
+  margin-top: 0.75rem !important;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.diacritic-subdot {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: baseline;
+  line-height: 1;
+}
+
+.diacritic-subdot::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.05em;
+  width: 0.16em;
+  height: 0.16em;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

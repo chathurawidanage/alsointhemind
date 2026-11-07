@@ -1,21 +1,31 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import 'nextra-theme-docs/style.css';
+import { figTree, libreBaskerville } from "./fonts";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { Head } from "nextra/components";
 
 export const metadata: Metadata = {
-  title: "This is also in the mind",
-  description: "In The Presence of Venerable Ñāṇavimala Mahāthera - A Disciple's Account, Kept Private for 25 Years",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://alsointhemind.com"),
+  title: "This Is Also in the Mind | In The Presence of Venerable Ñāṇavimala Mahāthera",
+  description: "A Disciple's Training, Kept Private for 25 Years. The life and teachings of Venerable Ñāṇavimala Mahāthera, preserved by Venerable Bambalapitiye Gnanaloka Thero.",
+  openGraph: {
+    title: "This Is Also in the Mind",
+    description: "In The Presence of Venerable Ñāṇavimala Mahāthera — A Disciple's Training, Kept Private for 25 Years",
+    type: "website",
+    images: [
+      {
+        url: "/book_cover.png",
+        width: 1500,
+        height: 2250,
+        alt: "This Is Also in the Mind Book Cover",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "This Is Also in the Mind",
+    description: "In The Presence of Venerable Ñāṇavimala Mahāthera — A Disciple's Training, Kept Private for 25 Years",
+    images: ["/book_cover.png"],
+  },
 };
 
 export default async function RootLayout({
@@ -27,8 +37,10 @@ export default async function RootLayout({
     <html lang="en"
       dir="ltr"
       suppressHydrationWarning>
+      <Head></Head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        className={`${figTree.className} ${libreBaskerville.variable} antialiased bg-white dark:bg-[#111111] text-gray-800 dark:text-gray-100`}>
+
         {children}
       </body>
     </html>
