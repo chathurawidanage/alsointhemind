@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect, useId } from 'react'
 import { createPortal } from 'react-dom'
 import { LuX } from 'react-icons/lu'
+import { linkSuttaText } from '../../lib/sutta-links'
 
 interface FootnoteProps {
   id?: string | number
@@ -146,7 +147,7 @@ export function Footnote({ id, number, title, children }: FootnoteProps) {
 
           {/* Content */}
           <div className="text-xs sm:text-[0.84rem] text-gray-700 dark:text-gray-300 space-y-1.5 font-normal leading-relaxed">
-            {children}
+            {linkSuttaText(children)}
           </div>
         </div>,
         document.body
