@@ -6,7 +6,7 @@ import { leagueSpartan, figTree } from "../fonts";
 
 interface BookChapterCardProps {
     title: string;
-    description: string;
+    description?: string;
     href: string;
     icon?: React.ReactNode;
 }
@@ -30,9 +30,11 @@ export const BookChapterCard = ({ title, description, href, icon }: BookChapterC
                         <h3 className={`text-xl font-bold text-gray-900 dark:text-gray-100 group-hover:text-book-orange transition-colors ${leagueSpartan.className}`}>
                             {title}
                         </h3>
-                        <p className={`text-gray-600 dark:text-neutral-400 mt-1 text-sm sm:text-base leading-relaxed ${figTree.className}`}>
-                            {description}
-                        </p>
+                        {description && (
+                            <p className={`text-gray-600 dark:text-neutral-400 mt-1 text-sm sm:text-base leading-relaxed ${figTree.className}`}>
+                                {description}
+                            </p>
+                        )}
                     </div>
                 </div>
             </div>

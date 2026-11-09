@@ -4,6 +4,17 @@ This document captures the hard-won lessons, CSS class mappings, edge cases, and
 
 ---
 
+## 0. Prime Directive: Absolute Text Fidelity
+
+> [!IMPORTANT]
+> **NEVER invent, generate, or summarize text.**
+> - Do not write AI-generated introductory paragraphs, summaries, or narrative connective tissue.
+> - Do not invent card descriptions.
+> - Every word of body prose, dates, quotes, captions, and footnotes must originate directly from the physical book / InDesign export.
+> - Landing pages only contain authentic chapter titles, metadata (dates and location), and clean navigation cards to the sub-pages.
+
+---
+
 ## 1. Directory & File Conventions
 
 - **Raw InDesign Assets**:
@@ -16,8 +27,29 @@ This document captures the hard-won lessons, CSS class mappings, edge cases, and
     - `Chapter XX - Reflection XX.html`
     - `css/idGeneratedStyles.css`
     - `image/`
-- **Output MDX**:
-  - `app/book/chapter{N}/page.mdx` (e.g. `app/book/chapter1/page.mdx`)
+- **Output MDX Structure**:
+  Each chapter is published on a single page matching the physical book layout: `app/book/chapter{N}/page.mdx`.
+  In the book, **Reflection comes first, and Notes comes second**:
+  1. `# Chapter {N}: “Title”`
+  2. `## Reflection 0{N}: Title`
+     - Full narrative prose (biographical background, reflections, etc.)
+     - Footnotes 1–5
+     - Associated reflection photographs and authentic captions
+  3. `---`
+  4. `## Notes`
+     - `*(Month Year – Month Year)*` (date range of notes)
+     - `*Location of Hermitage/Monastery*`
+     - Dated diary entries (`### DD Month YYYY`)
+     - Footnotes 6+
+     - `<PersonalNote>` styling for author's diary notes
+     - Associated hermitage/diary photographs and authentic captions
+- **Navigation Configuration**:
+  In `app/_meta.global.ts`, register each chapter as a single clean entry under `book.items`:
+  ```ts
+  chapter{N}: {
+      title: "Chapter N: Title",
+  }
+  ```
 - **Extracted Images**:
   - Saved to `public/images/chapter{N}/` using semantic filenames (e.g., `ven-nanavimala-library-polgasduwa.png`, not `06._Page_52.png`).
 - **Table of Contents**:
