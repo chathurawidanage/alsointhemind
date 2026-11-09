@@ -31,7 +31,7 @@ const meta = {
                 title: "A Reader's Guide",
             },
             chapter1: {
-                title: "Chapter 1",
+                title: "Chapter 1: Avoid Every Bondage With The World",
             }
         }
     }

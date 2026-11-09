@@ -39,7 +39,7 @@ export const TrustSection = () => {
                         <Link
                             href="mailto:info@srisambuddhamission.org"
                             color="foreground"
-                            className="text-xs sm:text-sm hover:text-book-orange transition-colors"
+                            className="text-xs text-gray-500 sm:text-sm hover:text-book-orange transition-colors"
                             data-umami-event="contact-click"
                             data-umami-event-method="email"
                         >
@@ -49,7 +49,7 @@ export const TrustSection = () => {
                         <Link
                             href="tel:+94777586808"
                             color="foreground"
-                            className="text-xs sm:text-sm hover:text-book-orange transition-colors"
+                            className="text-xs text-gray-500 sm:text-sm hover:text-book-orange transition-colors"
                             data-umami-event="contact-click"
                             data-umami-event-method="phone"
                         >
