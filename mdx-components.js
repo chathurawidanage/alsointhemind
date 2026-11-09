@@ -1,6 +1,7 @@
 import React from 'react'
 import { useMDXComponents as getThemeComponents } from 'nextra-theme-docs' // nextra-theme-blog or your custom theme
 import { Footnote } from './app/components/Footnote'
+import { PersonalNote } from './app/components/PersonalNote'
 import { linkSuttaText } from './lib/sutta-links'
 
 // Get the default MDX components
@@ -18,6 +19,7 @@ export function useMDXComponents(components) {
         li: (props) => React.createElement(Li, props, linkSuttaText(props.children)),
         blockquote: (props) => React.createElement(Blockquote, props, linkSuttaText(props.children)),
         Footnote,
+        PersonalNote,
         ...components
     }
 }

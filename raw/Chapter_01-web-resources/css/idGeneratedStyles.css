@@ -1,0 +1,359 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+ol._idFootAndEndNoteOLAttrs {
+	list-style-type:none;
+}
+div.Basic-Graphics-Frame {
+	border-color:#000000;
+	border-width:1px;
+	border-style:solid;
+}
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+p.Normal {
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:11px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.15;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Basic-Paragraph {
+	color:#000000;
+	font-family:"Minion Pro", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Drop-Cap {
+	font-family:"Adobe Devanagari", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform:none;
+}
+span.Foot-Note {
+	font-family:"Adobe Devanagari", serif;
+	font-size:10px;
+	font-style:normal;
+	font-weight:normal;
+}
+p.ParaOverride-1 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+	text-align:center;
+}
+p.ParaOverride-2 {
+	-epub-hyphens:none;
+	text-align:center;
+}
+p.ParaOverride-3 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+	text-align:justify;
+	text-align-last:left;
+}
+p.ParaOverride-4 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+	margin-left:36px;
+	text-align:justify;
+	text-align-last:left;
+	text-indent:-18px;
+}
+p.ParaOverride-5 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+	margin-left:36px;
+	text-indent:-18px;
+}
+p.ParaOverride-6 {
+	-epub-hyphens:none;
+	margin-bottom:6px;
+	margin-left:36px;
+	text-align:justify;
+	text-align-last:left;
+	text-indent:-18px;
+}
+p.ParaOverride-7 {
+	-epub-hyphens:none;
+	margin-bottom:6px;
+	margin-left:36px;
+	text-indent:-18px;
+}
+p.ParaOverride-8 {
+	-epub-hyphens:none;
+	margin-bottom:6px;
+	text-align:justify;
+	text-align-last:left;
+}
+p.ParaOverride-9 {
+	-epub-hyphens:none;
+	margin-bottom:7px;
+	margin-left:36px;
+	text-align:justify;
+	text-align-last:left;
+	text-indent:-18px;
+}
+p.ParaOverride-10 {
+	-epub-hyphens:none;
+	margin-bottom:7px;
+	margin-left:36px;
+	text-indent:-18px;
+}
+p.ParaOverride-11 {
+	-epub-hyphens:none;
+	margin-bottom:7px;
+	margin-left:36px;
+}
+p.ParaOverride-12 {
+	-epub-hyphens:none;
+	margin-bottom:7px;
+	margin-left:36px;
+	text-align:justify;
+	text-align-last:left;
+}
+p.ParaOverride-13 {
+	-epub-hyphens:none;
+	margin-left:14px;
+	text-align:justify;
+	text-align-last:left;
+	text-indent:-14px;
+}
+span.CharOverride-1 {
+	font-size:15px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+span.CharOverride-2 {
+	font-size:18px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+span.CharOverride-3 {
+	font-size:22px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-4 {
+	font-size:13px;
+}
+span.CharOverride-5 {
+	font-size:13px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-6 {
+	font-size:14px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-7 {
+	font-family:"SARA-SERASILI", sans-serif;
+	font-size:9px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-8 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:9px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-9 {
+	font-size:13px;
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-10 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:7px;
+	font-style:normal;
+	font-weight:normal;
+	vertical-align:super;
+}
+span.CharOverride-11 {
+	font-size:7px;
+	vertical-align:super;
+}
+span.CharOverride-12 {
+	font-size:13px;
+	font-style:italic;
+	font-weight:bold;
+}
+span.CharOverride-13 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:7px;
+	font-style:normal;
+	font-weight:bold;
+	vertical-align:super;
+}
+span.CharOverride-14 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:7px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	text-transform:none;
+	vertical-align:super;
+}
+span.CharOverride-15 {
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-16 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:10px;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-17 {
+	font-family:"Adobe Devanagari", serif;
+	font-size:10px;
+	font-style:italic;
+	font-weight:normal;
+}
+#_idContainer001 {
+	display:inline-block;
+	height:21px;
+	position:relative;
+	width:163px;
+}
+#_idContainer002 {
+	-ms-transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:292.73px;
+	left:0px;
+	position:absolute;
+	top:0px;
+	transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:433.70px;
+	z-index:1;
+}
+#_idContainer003 {
+	-ms-transform:translate(56.692px,305.639px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(56.692px,305.639px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:11.77px;
+	left:0px;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	transform:translate(56.692px,305.639px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(56.692px,305.639px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:311.81px;
+	z-index:0;
+}
+#_idContainer004 {
+	display:inline-block;
+	height:317px;
+	position:relative;
+	width:434px;
+}
+#_idContainer005 {
+	-ms-transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:327.78px;
+	left:0px;
+	position:absolute;
+	top:0px;
+	transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(0.000px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:433.70px;
+	z-index:1;
+}
+#_idContainer006 {
+	-ms-transform:translate(65.196px,328.641px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(65.196px,328.641px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:41.03px;
+	left:0px;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	transform:translate(65.196px,328.641px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(65.196px,328.641px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:311.81px;
+	z-index:0;
+}
+#_idContainer007 {
+	display:inline-block;
+	height:370px;
+	position:relative;
+	width:434px;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-2 {
+	background-color:#ffffff;
+	border-width:0px;
+}
+hr.HorizontalRule-1 {
+	border-bottom:none;
+	border-left:none;
+	border-right:none;
+	border-top:solid #000000 1px;
+}
+div._idGenObjectLayout-1 {
+	text-align:center;
+}

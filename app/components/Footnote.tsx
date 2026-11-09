@@ -2,18 +2,28 @@
 
 import React, { useState, useRef, useEffect, useId } from 'react'
 import { createPortal } from 'react-dom'
-import { LuX } from 'react-icons/lu'
+import { LuX, LuCircleAlert, LuInfo } from 'react-icons/lu'
 import { linkSuttaText } from '../../lib/sutta-links'
 
 interface FootnoteProps {
   id?: string | number
   number?: string | number
   title?: string
+  showNumber?: boolean
+  icon?: 'alert' | 'info'
   children: React.ReactNode
 }
 
-export function Footnote({ id, number, title, children }: FootnoteProps) {
+export function Footnote({
+  id,
+  number,
+  title,
+  showNumber = false,
+  icon = 'alert',
+  children,
+}: FootnoteProps) {
   const displayNum = number ?? id ?? 1
+  const Icon = icon === 'info' ? LuInfo : LuCircleAlert
   const [isOpen, setIsOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
   const triggerRef = useRef<HTMLButtonElement>(null)
@@ -107,11 +117,19 @@ export function Footnote({ id, number, title, children }: FootnoteProps) {
         onClick={toggle}
         aria-expanded={isOpen}
         aria-controls={popoverId}
-        aria-label={`Footnote ${displayNum}`}
-        title={`View note ${displayNum}`}
-        className="inline-flex items-center justify-center -top-1.5 relative mx-0.5 px-1 py-0.2 text-[0.72rem] font-semibold font-mono rounded bg-amber-500/10 hover:bg-amber-500/20 active:bg-amber-500/30 text-amber-700 dark:text-amber-400 border border-amber-500/25 dark:border-amber-500/35 hover:border-amber-500/50 transition-colors cursor-pointer select-none focus:outline-none focus:ring-2 focus:ring-amber-500/40"
+        aria-label={title ?? (showNumber ? `Footnote ${displayNum}` : 'More information')}
+        title={title ?? (showNumber ? `View note ${displayNum}` : 'More information')}
+        className={`inline-flex items-center justify-center -top-1 relative mx-0.5 cursor-pointer select-none transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500/40 ${
+          showNumber
+            ? 'px-1 py-0.2 text-[0.72rem] font-semibold font-mono rounded bg-amber-500/10 hover:bg-amber-500/20 active:bg-amber-500/30 text-amber-700 dark:text-amber-400 border border-amber-500/25 dark:border-amber-500/35 hover:border-amber-500/50'
+            : 'p-0.5 rounded-full text-amber-600 dark:text-amber-400 hover:text-amber-700 dark:hover:text-amber-300 hover:bg-amber-500/15 active:bg-amber-500/25'
+        }`}
       >
-        [{displayNum}]
+        {showNumber ? (
+          `[${displayNum}]`
+        ) : (
+          <Icon className="w-3.5 h-3.5" aria-hidden="true" />
+        )}
       </button>
 
       {isOpen && mounted && coords && createPortal(
@@ -119,7 +137,7 @@ export function Footnote({ id, number, title, children }: FootnoteProps) {
           ref={popoverRef}
           id={popoverId}
           role="dialog"
-          aria-label={title ?? `Footnote ${displayNum}`}
+          aria-label={title ?? (showNumber ? `Footnote ${displayNum}` : 'Note')}
           style={{
             position: 'fixed',
             top: coords.placeAbove ? 'auto' : `${coords.top}px`,
@@ -132,9 +150,12 @@ export function Footnote({ id, number, title, children }: FootnoteProps) {
         >
           {/* Header */}
           <div className="flex items-center justify-between pb-2 mb-2 border-b border-gray-100 dark:border-neutral-800">
-            <span className="text-xs font-semibold tracking-wider uppercase text-amber-700 dark:text-amber-400">
-              {title ?? `Note [${displayNum}]`}
-            </span>
+            <div className="flex items-center gap-1.5 text-amber-700 dark:text-amber-400">
+              <Icon className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
+              <span className="text-xs font-semibold tracking-wider uppercase">
+                {title ?? (showNumber ? `Note [${displayNum}]` : 'Note')}
+              </span>
+            </div>
             <button
               type="button"
               onClick={() => setIsOpen(false)}
