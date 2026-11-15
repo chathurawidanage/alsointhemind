@@ -1,0 +1,197 @@
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+div.Basic-Text-Frame {
+	border-style:solid;
+}
+p.Normal {
+	color:#000000;
+	font-family:Arial, sans-serif;
+	font-size:11px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.15;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+p.Basic-Paragraph {
+	color:#000000;
+	font-family:"Minion Pro", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+span.Drop-Cap {
+	font-family:"Adobe Devanagari", serif;
+	font-size:12px;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	text-transform:none;
+}
+span.Foot-Note {
+	font-family:"Adobe Devanagari", serif;
+	font-size:10px;
+	font-style:normal;
+	font-weight:normal;
+}
+p.ParaOverride-1 {
+	-epub-hyphens:none;
+	text-align:center;
+}
+p.ParaOverride-2 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+	text-align:center;
+}
+p.ParaOverride-3 {
+	-epub-hyphens:none;
+	margin-bottom:9px;
+}
+p.ParaOverride-4 {
+	-epub-hyphens:none;
+	margin-bottom:5px;
+}
+span.CharOverride-1 {
+	font-size:24px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-2 {
+	font-size:13px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-3 {
+	font-size:13px;
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-4 {
+	font-size:13px;
+}
+span.CharOverride-5 {
+	font-size:12px;
+	font-style:normal;
+	font-weight:bold;
+}
+span.CharOverride-6 {
+	font-size:12px;
+}
+span.CharOverride-7 {
+	font-size:12px;
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-8 {
+	font-size:10px;
+}
+span.CharOverride-9 {
+	font-style:italic;
+	font-weight:normal;
+}
+span.CharOverride-10 {
+	font-family:Symbol, sans-serif;
+	font-style:normal;
+	font-weight:normal;
+}
+span.CharOverride-11 {
+	font-style:normal;
+	font-weight:bold;
+}
+#_idContainer004 {
+	-ms-transform:translate(0.000px,490.677px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(0.000px,490.677px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:25.23px;
+	left:0px;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	transform:translate(0.000px,490.677px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(0.000px,490.677px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:311.81px;
+	z-index:0;
+}
+#_idContainer005 {
+	-ms-transform:translate(0.364px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-ms-transform-origin:0% 0%;
+	-webkit-transform:translate(0.364px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	-webkit-transform-origin:0% 0%;
+	height:488.98px;
+	left:0px;
+	position:absolute;
+	top:0px;
+	transform:translate(0.364px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform:translate(0.364px,0.000px) rotate(0.000deg) skew(0.000deg) scale(1.000,1.000);
+	transform-origin:0% 0%;
+	transform-origin:0% 0%;
+	width:311.45px;
+	z-index:1;
+}
+#_idContainer006 {
+	display:inline-block;
+	height:516px;
+	position:relative;
+	width:312px;
+}
+#_idContainer008 {
+	display:inline-block;
+	height:14px;
+	position:relative;
+	width:74px;
+}
+img._idGenObjectAttribute-1 {
+	height:100.00%;
+	min-width:100%;
+	width:100.00%;
+}
+div._idGenObjectStyleOverride-1 {
+	border-width:0px;
+}
+div._idGenObjectStyleOverride-2 {
+	background-color:#000000;
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
+	border-color:#000000;
+	border-style:solid;
+	border-top-left-radius:12px;
+	border-top-right-radius:12px;
+	border-width:1px;
+}
+div._idGenObjectLayout-1 {
+	text-align:center;
+}
