@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/book_cover.png",
-        width: 1500,
-        height: 2250,
+        url: "/book_cover_v3.png",
+        width: 7336,
+        height: 10452,
         alt: "This Is Also in the Mind Book Cover",
       },
     ],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "This Is Also in the Mind",
     description: "In The Presence of Venerable Ñāṇavimala Mahāthera — A Disciple's Training, Kept Private for 25 Years",
-    images: ["/book_cover.png"],
+    images: ["/book_cover_v3.png"],
   },
 };
 

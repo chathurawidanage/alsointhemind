@@ -18,34 +18,51 @@ export const CTASection = () => {
                     Download the complete book as a free PDF or read it online. Discover the path to true freedom as walked by a modern sage.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
-                    <Button
-                        size="lg"
-                        as="a"
-                        href="/THIS%20IS%20ALSO%20IN%20THE%20MIND.pdf"
-                        download="THIS IS ALSO IN THE MIND.pdf"
+                <div className="flex flex-col items-center w-full sm:w-auto">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                        <Button
+                            size="lg"
+                            as="a"
+                            href="/THIS%20IS%20ALSO%20IN%20THE%20MIND.pdf"
+                            download="THIS IS ALSO IN THE MIND.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variant="bordered"
+                            className="border-book-orange text-book-orange font-semibold min-w-[200px] hover:bg-orange-50/50 transition-colors"
+                            startContent={<LuDownload className="text-xl" />}
+                            data-umami-event="download-pdf"
+                            data-umami-event-location="cta-section"
+                        >
+                            Download PDF
+                        </Button>
+
+                        <Button
+                            size="lg"
+                            as={Link}
+                            href="/book"
+                            variant="solid"
+                            className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
+                            data-umami-event="read-online"
+                            data-umami-event-location="cta-section"
+                        >
+                            Read Online
+                        </Button>
+                    </div>
+
+                    <a
+                        href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings_CHAPTER_ORDER_compressed.pdf"
+                        download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        variant="bordered"
-                        className="border-book-orange text-book-orange font-semibold min-w-[200px] hover:bg-orange-50/50 transition-colors"
-                        startContent={<LuDownload className="text-xl" />}
-                        data-umami-event="download-pdf"
+                        className={`text-xs sm:text-sm text-gray-600 hover:text-book-orange font-medium transition-colors inline-flex items-center gap-1.5 mt-4 text-center ${figTree.className}`}
+                        data-umami-event="download-sutta-companion-pdf"
                         data-umami-event-location="cta-section"
                     >
-                        Download Free PDF
-                    </Button>
-
-                    <Button
-                        size="lg"
-                        as={Link}
-                        href="/book"
-                        variant="solid"
-                        className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
-                        data-umami-event="read-online"
-                        data-umami-event-location="cta-section"
-                    >
-                        Read Online
-                    </Button>
+                        <LuDownload className="text-xs text-book-orange shrink-0" />
+                        <span className="underline underline-offset-4 decoration-gray-300 hover:decoration-book-orange">
+                            Recommended Sutta Readings (Companion PDF)
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>

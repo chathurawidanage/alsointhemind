@@ -44,6 +44,9 @@ const meta = {
             },
             chapter5: {
                 title: "Chapter 5: Always Be with Thoughts of Mettā",
+            },
+            chapter6: {
+                title: "Chapter 6: Restrain, Abstain and Endure",
             }
         }
     }

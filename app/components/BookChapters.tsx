@@ -1,6 +1,6 @@
 import { leagueSpartan, figTree } from "../fonts";
 import Link from "next/link";
-import { LuBookMarked, LuFootprints, LuScroll, LuUsers } from "react-icons/lu";
+import { LuBookMarked, LuFootprints, LuScroll, LuUsers, LuDownload } from "react-icons/lu";
 
 export const BookChapters = () => {
     return (
@@ -71,6 +71,18 @@ export const BookChapters = () => {
                                 <div>
                                     <h5 className={`font-bold text-sm text-gray-900 ${leagueSpartan.className}`}>Readings for Enlightenment</h5>
                                     <p className={`text-xs text-gray-500 mt-0.5 ${figTree.className}`}>Recommended Sutta study path</p>
+                                    <a
+                                        href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings_CHAPTER_ORDER_compressed.pdf"
+                                        download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings.pdf"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-book-orange hover:text-[#e06213] underline underline-offset-2 mt-1.5 transition-colors"
+                                        data-umami-event="download-sutta-companion-pdf"
+                                        data-umami-event-location="chapters-curriculum"
+                                    >
+                                        <LuDownload className="text-xs shrink-0" />
+                                        Download Suttas (PDF)
+                                    </a>
                                 </div>
                             </div>
 

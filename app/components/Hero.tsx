@@ -3,7 +3,7 @@
 import { Button, Link } from "@heroui/react";
 import Image from "next/image";
 import { leagueSpartan, libreBaskerville, figTree } from "../fonts";
-import book3D from "../../public/book_3d.png";
+import book3D from "../../public/book_3d_v5.png";
 import { LuDownload } from "react-icons/lu";
 
 export const Hero = () => {
@@ -33,34 +33,53 @@ export const Hero = () => {
                         The personal encounters and handwritten training notes of a disciple under one of Sri Lanka&apos;s greatest solitary forest masters. Preserved in private for a quarter-century, now offered freely to all seekers.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mt-4 pt-2 w-full sm:w-auto">
-                        <Button
-                            size="lg"
-                            as="a"
-                            href="/THIS%20IS%20ALSO%20IN%20THE%20MIND.pdf"
-                            download="THIS IS ALSO IN THE MIND.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            variant="bordered"
-                            className="border-book-orange text-book-orange font-semibold min-w-[200px] bg-white/90 backdrop-blur-sm hover:bg-orange-50/50 transition-colors"
-                            startContent={<LuDownload className="text-xl" />}
-                            data-umami-event="download-pdf"
-                            data-umami-event-location="hero"
-                        >
-                            Download Free PDF
-                        </Button>
+                    <div className="flex flex-col items-center lg:items-start mt-4 pt-2 w-full sm:w-auto">
+                        <div className="flex flex-col items-center w-full sm:w-auto">
+                            <div className="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto">
+                                <Button
+                                    size="lg"
+                                    as="a"
+                                    href="/THIS%20IS%20ALSO%20IN%20THE%20MIND.pdf"
+                                    download="THIS IS ALSO IN THE MIND.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    variant="bordered"
+                                    className="border-book-orange text-book-orange font-semibold min-w-[200px] bg-white/90 backdrop-blur-sm hover:bg-orange-50/50 transition-colors"
+                                    startContent={<LuDownload className="text-xl" />}
+                                    data-umami-event="download-pdf"
+                                    data-umami-event-location="hero"
+                                >
+                                    Download PDF
+                                </Button>
 
-                        <Button
-                            size="lg"
-                            as={Link}
-                            href="/book"
-                            variant="solid"
-                            className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
-                            data-umami-event="read-online"
-                            data-umami-event-location="hero"
-                        >
-                            Read Online
-                        </Button>
+                                <Button
+                                    size="lg"
+                                    as={Link}
+                                    href="/book"
+                                    variant="solid"
+                                    className="bg-book-orange text-white font-semibold min-w-[200px] shadow-sm hover:bg-[#e06213] transition-colors"
+                                    data-umami-event="read-online"
+                                    data-umami-event-location="hero"
+                                >
+                                    Read Online
+                                </Button>
+                            </div>
+
+                            <a
+                                href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings_CHAPTER_ORDER_compressed.pdf"
+                                download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`text-xs sm:text-sm text-gray-600 hover:text-book-orange font-medium transition-colors inline-flex items-center gap-1.5 mt-3 text-center ${figTree.className}`}
+                                data-umami-event="download-sutta-companion-pdf"
+                                data-umami-event-location="hero"
+                            >
+                                <LuDownload className="text-xs text-book-orange shrink-0" />
+                                <span className="underline underline-offset-4 decoration-gray-300 hover:decoration-book-orange">
+                                    Recommended Sutta Readings (Companion PDF)
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
