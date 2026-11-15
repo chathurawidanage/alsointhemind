@@ -38,6 +38,9 @@ const meta = {
             },
             chapter3: {
                 title: "Chapter 3: The Way You Deal With Your Parents",
+            },
+            chapter4: {
+                title: "Chapter 4: More Pleasure More Danger",
             }
         }
     }
