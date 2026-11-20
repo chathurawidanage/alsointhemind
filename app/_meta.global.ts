@@ -8,7 +8,11 @@ const meta = {
         type: 'page',
         display: 'hidden'
     },
-    book: {
+    download: {
+        type: 'page',
+        display: 'hidden'
+    },
+    read: {
         items: {
             '*': {
                 theme: {
@@ -47,6 +51,9 @@ const meta = {
             },
             chapter6: {
                 title: "Chapter 6: Restrain, Abstain and Endure",
+            },
+            chapter7: {
+                title: "Chapter 7: Stick to the Exact Words of the Buddha",
             }
         }
     }

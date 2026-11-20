@@ -10,13 +10,38 @@ const nextConfig: NextConfig = withNextra({
   async redirects() {
     return [
       {
+        source: '/downloads',
+        destination: '/download',
+        permanent: true,
+      },
+      {
         source: '/book/introduction',
-        destination: '/book/before-it-was-too-late',
+        destination: '/read/before-it-was-too-late',
+        permanent: true,
+      },
+      {
+        source: '/read/introduction',
+        destination: '/read/before-it-was-too-late',
         permanent: true,
       },
       {
         source: '/book/forward',
-        destination: '/book/foreword',
+        destination: '/read/foreword',
+        permanent: true,
+      },
+      {
+        source: '/read/forward',
+        destination: '/read/foreword',
+        permanent: true,
+      },
+      {
+        source: '/book',
+        destination: '/read',
+        permanent: true,
+      },
+      {
+        source: '/book/:path*',
+        destination: '/read/:path*',
         permanent: true,
       },
     ];

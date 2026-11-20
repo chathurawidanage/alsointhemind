@@ -1,6 +1,5 @@
 import { leagueSpartan, figTree } from "../fonts";
-import Link from "next/link";
-import { LuBookMarked, LuFootprints, LuScroll, LuUsers, LuDownload } from "react-icons/lu";
+import { LuBookMarked, LuFootprints, LuScroll, LuUsers } from "react-icons/lu";
 
 export const BookChapters = () => {
     return (
@@ -46,23 +45,13 @@ export const BookChapters = () => {
 
                     {/* Practical Appendices Highlight — perfectly aligned with the grid above */}
                     <div className="bg-white border border-orange-100 rounded-2xl p-6 sm:p-8 shadow-xs">
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-gray-100">
-                            <div className="text-center md:text-left">
-                                <span className={`text-xs font-bold uppercase tracking-[0.2em] text-book-orange block mb-1 ${leagueSpartan.className}`}>
-                                    Practical Appendices
-                                </span>
-                                <h4 className={`text-2xl font-bold text-gray-900 ${leagueSpartan.className}`}>
-                                    The Master&apos;s Training Curriculum
-                                </h4>
-                            </div>
-                            <Link
-                                href="/book"
-                                className="text-xs uppercase font-bold tracking-wider text-book-orange hover:text-[#e06213] transition-colors"
-                                data-umami-event="read-online"
-                                data-umami-event-location="chapters-appendices"
-                            >
-                                Read Online &rarr;
-                            </Link>
+                        <div className="pb-6 border-b border-gray-100 text-center md:text-left">
+                            <span className={`text-xs font-bold uppercase tracking-[0.2em] text-book-orange block mb-1 ${leagueSpartan.className}`}>
+                                Practical Appendices
+                            </span>
+                            <h4 className={`text-2xl font-bold text-gray-900 ${leagueSpartan.className}`}>
+                                The Master&apos;s Training Curriculum
+                            </h4>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
@@ -71,18 +60,6 @@ export const BookChapters = () => {
                                 <div>
                                     <h5 className={`font-bold text-sm text-gray-900 ${leagueSpartan.className}`}>Readings for Enlightenment</h5>
                                     <p className={`text-xs text-gray-500 mt-0.5 ${figTree.className}`}>Recommended Sutta study path</p>
-                                    <a
-                                        href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings_CHAPTER_ORDER_compressed.pdf"
-                                        download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings.pdf"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1 text-[11px] font-semibold text-book-orange hover:text-[#e06213] underline underline-offset-2 mt-1.5 transition-colors"
-                                        data-umami-event="download-sutta-companion-pdf"
-                                        data-umami-event-location="chapters-curriculum"
-                                    >
-                                        <LuDownload className="text-xs shrink-0" />
-                                        Download Suttas (PDF)
-                                    </a>
                                 </div>
                             </div>
 
@@ -111,17 +88,6 @@ export const BookChapters = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="mt-10 text-center">
-                    <Link
-                        href="/book"
-                        className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-book-orange hover:text-[#e06213] transition-colors"
-                        data-umami-event="read-online"
-                        data-umami-event-location="chapters-bottom"
-                    >
-                        Read the complete book online &rarr;
-                    </Link>
                 </div>
             </div>
         </section>

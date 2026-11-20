@@ -28,8 +28,11 @@ export const Footer = () => {
                         <Link href="/#book-description" className="hover:text-book-orange transition-colors">
                             The Book
                         </Link>
+                        <Link href="/download" className="hover:text-book-orange transition-colors">
+                            Downloads
+                        </Link>
                         <Link
-                            href="/book"
+                            href="/read"
                             className="hover:text-book-orange transition-colors text-book-orange"
                             data-umami-event="read-online"
                             data-umami-event-location="footer"

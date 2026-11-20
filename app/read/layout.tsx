@@ -51,7 +51,7 @@ export default async function BookLayout({
       <Layout
         navbar={navbar}
         search={searchControls}
-        pageMap={await getPageMap("/book")}
+        pageMap={await getPageMap("/read")}
         editLink={null}
         feedback={{ content: null }}
         copyPageButton={false}

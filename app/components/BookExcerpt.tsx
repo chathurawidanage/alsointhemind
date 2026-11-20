@@ -56,7 +56,7 @@ export const BookExcerpt = () => {
                         — From Reflection 6: Living an Island Unto Oneself
                     </span>
                     <Link
-                        href="/book"
+                        href="/read"
                         className="text-sm font-semibold text-book-orange hover:text-orange-300 transition-colors inline-flex items-center gap-1"
                         data-umami-event="read-online"
                         data-umami-event-location="excerpt"

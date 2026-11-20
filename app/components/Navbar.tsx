@@ -23,6 +23,7 @@ export const AppNavbar = () => {
         { label: "Home", href: "/" },
         { label: "The Master", href: "/master" },
         { label: "The Book", href: "/#book-description" },
+        { label: "Downloads", href: "/download" },
     ];
 
     return (
@@ -74,7 +75,7 @@ export const AppNavbar = () => {
                         as={Link}
                         color="default"
                         className="bg-book-orange text-white font-semibold text-sm px-5 py-2 shadow-sm hover:bg-[#e06213] transition-colors"
-                        href="/book"
+                        href="/read"
                         variant="solid"
                         data-umami-event="read-online"
                         data-umami-event-location="navbar"
@@ -105,7 +106,7 @@ export const AppNavbar = () => {
                 <NavbarMenuItem className="pt-2">
                     <Button
                         as={Link}
-                        href="/book"
+                        href="/read"
                         className="w-full bg-book-orange text-white font-semibold"
                         onPress={() => setIsMenuOpen(false)}
                         data-umami-event="read-online"
