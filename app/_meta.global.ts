@@ -54,6 +54,9 @@ const meta = {
             },
             chapter7: {
                 title: "Chapter 7: Stick to the Exact Words of the Buddha",
+            },
+            chapter8: {
+                title: "Chapter 8: What Doesn’t Arise, Doesn’t Pass Away",
             }
         }
     }

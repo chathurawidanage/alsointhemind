@@ -47,10 +47,6 @@ export const Footer = () => {
                         <p className={figTree.className}>
                             &copy; {currentYear} Sri Sambuddha Mission Charitable Trust.
                         </p>
-                        <span className="hidden sm:inline text-gray-700">&bull;</span>
-                        <p className="text-gray-400">
-                            Printed for free distribution. Not for sale.
-                        </p>
                     </div>
 
                     <Link
