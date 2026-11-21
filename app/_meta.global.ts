@@ -60,6 +60,9 @@ const meta = {
             },
             chapter9: {
                 title: "Chapter 9: Give a Finger to Māra, He Takes a Hand",
+            },
+            chapter10: {
+                title: "Chapter 10: Find a Way to Bring Many to This Path",
             }
         }
     }
