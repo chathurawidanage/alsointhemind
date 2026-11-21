@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { leagueSpartan, figTree } from "../fonts";
-import { LuBookMarked, LuFootprints, LuScroll, LuUsers } from "react-icons/lu";
+import { LuBookMarked, LuFootprints, LuScroll, LuUsers, LuArrowRight } from "react-icons/lu";
 
 export const BookChapters = () => {
     return (
@@ -29,17 +30,21 @@ export const BookChapters = () => {
                             "Give A Finger To Māra, He Takes A Hand",
                             "Find A Way To Bring Many To This Path"
                         ].map((chapter, index) => (
-                            <div
+                            <Link
                                 key={index}
-                                className="flex items-start gap-4 p-4 bg-white border border-gray-100 hover:border-orange-200 hover:bg-orange-50/20 transition-all rounded-xl shadow-xs"
+                                href={`/read/chapter${index + 1}`}
+                                className="group flex items-center justify-between gap-3 p-4 bg-white border border-gray-100 hover:border-orange-200 hover:bg-orange-50/20 hover:shadow-xs transition-all rounded-xl shadow-xs"
                             >
-                                <span className={`text-book-orange font-bold text-lg min-w-[32px] ${leagueSpartan.className}`}>
-                                    {(index + 1).toString().padStart(2, '0')}
-                                </span>
-                                <span className={`text-gray-800 font-medium text-base sm:text-lg ${figTree.className}`}>
-                                    {chapter}
-                                </span>
-                            </div>
+                                <div className="flex items-start gap-4">
+                                    <span className={`text-book-orange font-bold text-lg min-w-[32px] group-hover:scale-105 transition-transform ${leagueSpartan.className}`}>
+                                        {(index + 1).toString().padStart(2, '0')}
+                                    </span>
+                                    <span className={`text-gray-800 group-hover:text-book-orange font-medium text-base sm:text-lg transition-colors ${figTree.className}`}>
+                                        {chapter}
+                                    </span>
+                                </div>
+                                <LuArrowRight className="text-gray-300 group-hover:text-book-orange group-hover:translate-x-0.5 transition-all shrink-0 text-base" />
+                            </Link>
                         ))}
                     </div>
 
