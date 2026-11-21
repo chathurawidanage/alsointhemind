@@ -57,6 +57,9 @@ const meta = {
             },
             chapter8: {
                 title: "Chapter 8: What Doesn’t Arise, Doesn’t Pass Away",
+            },
+            chapter9: {
+                title: "Chapter 9: Give a Finger to Māra, He Takes a Hand",
             }
         }
     }
