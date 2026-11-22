@@ -41,14 +41,6 @@ export const BookExcerpt = () => {
                     <p>
                         It was the kind of teaching that could only come from someone who had tested it against hunger, against danger, against the collapse of every external support—and found it true.
                     </p>
-
-                    <p>
-                        Years earlier, during his cārikā, Ven. Ñāṇavimala had been confronted by robbers seeking valuables. They demanded he strip to just his under-robe while they rummaged through his belongings. He quietly stepped away and hid. When he returned, he found his possessions scattered across the ground—but nothing had been taken.
-                    </p>
-
-                    <p>
-                        Even these desperately poor thieves had found nothing worth stealing. His books were completely written in, margins filled with notes. His robes were weathered. Every item bore the marks of years of use and utter simplicity. There was simply nothing of value to take—not even to those who had nothing.
-                    </p>
                 </div>
 
                 <div className="mt-12 pt-6 border-t border-[#33312e] flex flex-col sm:flex-row items-center justify-between gap-4">
