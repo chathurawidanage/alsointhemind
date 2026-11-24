@@ -22,6 +22,7 @@ export const AppNavbar = () => {
     const navItems = [
         { label: "Home", href: "/" },
         { label: "The Master", href: "/master" },
+        { label: "The Disciple", href: "/#disciple" },
         { label: "The Book", href: "/#book-description" },
         { label: "Downloads", href: "/download" },
     ];
@@ -53,7 +54,7 @@ export const AppNavbar = () => {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-8" justify="center">
+            <NavbarContent className="hidden sm:flex gap-6 lg:gap-8" justify="center">
                 {navItems.map((item) => (
                     <NavbarItem key={item.href}>
                         <Link

@@ -66,7 +66,7 @@ export const MonkProfiles = () => {
             </section>
 
             {/* Disciple Section */}
-            <section className="py-20 bg-gray-50/70 text-center border-b border-gray-100">
+            <section id="disciple" className="py-20 bg-gray-50/70 text-center border-b border-gray-100 scroll-mt-20">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="max-w-2xl mx-auto flex flex-col items-center">
                         <div className="w-36 h-36 sm:w-44 sm:h-44 relative rounded-full overflow-hidden shadow-lg border-4 border-white mb-6 shrink-0">

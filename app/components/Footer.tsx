@@ -25,6 +25,9 @@ export const Footer = () => {
                         <Link href="/master" className="hover:text-book-orange transition-colors">
                             The Master
                         </Link>
+                        <Link href="/#disciple" className="hover:text-book-orange transition-colors">
+                            The Disciple
+                        </Link>
                         <Link href="/#book-description" className="hover:text-book-orange transition-colors">
                             The Book
                         </Link>
