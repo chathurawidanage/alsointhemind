@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Downloads & Companion Books | This Is Also in the Mind",
-    description: "Download 'This Is Also in the Mind' (PDF) and companion volumes including Recommended Sutta Readings and Venerable Nyanatiloka's 'The Word of the Buddha'.",
+    description: "Download 'This Is Also in the Mind' (PDF & EPUB) and companion volumes including Recommended Sutta Readings and Venerable Nyanatiloka's 'The Word of the Buddha'.",
     openGraph: {
         title: "Downloads & Companion Books | This Is Also in the Mind",
-        description: "PDF editions of 'This Is Also in the Mind' and companion canonical study guides.",
+        description: "PDF and EPUB editions of 'This Is Also in the Mind' and companion canonical study guides.",
         type: "website",
         images: [
             {

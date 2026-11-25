@@ -8,7 +8,6 @@ import { leagueSpartan, libreBaskerville, figTree } from "../fonts";
 import {
     LuDownload,
     LuBookOpen,
-    LuFileText,
     LuLayers,
     LuCheck,
 } from "react-icons/lu";
@@ -94,29 +93,23 @@ export default function DownloadPage() {
                                         </p>
 
                                         {/* Specs Grid */}
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full max-w-xl mb-8">
-                                            <div className="bg-white/90 p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start">
+                                        <div className="grid grid-cols-3 gap-2.5 sm:gap-3 w-full max-w-xl mb-8">
+                                            <div className="bg-white/90 p-2.5 sm:p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start text-center lg:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Language</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
                                                     English
                                                 </span>
                                             </div>
-                                            <div className="bg-white/90 p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start">
+                                            <div className="bg-white/90 p-2.5 sm:p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start text-center lg:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Length</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuBookOpen className="text-book-orange text-xs" /> 353 Pages
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    353 Pages
                                                 </span>
                                             </div>
-                                            <div className="bg-white/90 p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Format</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuFileText className="text-book-orange text-xs" /> PDF
-                                                </span>
-                                            </div>
-                                            <div className="bg-white/90 p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">File Size</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuDownload className="text-book-orange text-xs" /> 13.1 MB
+                                            <div className="bg-white/90 p-2.5 sm:p-3 rounded-xl border border-gray-200/80 flex flex-col items-center lg:items-start text-center lg:text-left">
+                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Contents</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    10 Chapters
                                                 </span>
                                             </div>
                                         </div>
@@ -137,36 +130,110 @@ export default function DownloadPage() {
                                             </li>
                                         </ul>
 
-                                        {/* CTAs */}
-                                        <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 w-full sm:w-auto">
-                                            <Button
-                                                size="lg"
-                                                as="a"
-                                                href="/This_Is_Also_in_the_Mind-alsointhemind.com.pdf"
-                                                download="This_Is_Also_in_the_Mind-alsointhemind.com.pdf"
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                variant="solid"
-                                                className="bg-book-orange text-white font-semibold min-w-[220px] shadow-sm hover:bg-[#e06213] transition-all w-full sm:w-auto"
-                                                startContent={<LuDownload className="text-xl shrink-0" />}
-                                                data-umami-event="download-pdf"
-                                                data-umami-event-location="download-page-main"
-                                            >
-                                                Download PDF (13.1 MB)
-                                            </Button>
+                                        {/* Available Formats & Actions */}
+                                        <div className="w-full max-w-xl space-y-3">
+                                            <div className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-1 text-center lg:text-left">
+                                                Available Formats & Reading Options
+                                            </div>
 
-                                            <Button
-                                                size="lg"
-                                                as={Link}
-                                                href="/read"
-                                                variant="bordered"
-                                                className="border-book-orange text-book-orange font-semibold min-w-[180px] bg-white hover:bg-orange-50/50 transition-colors w-full sm:w-auto"
-                                                startContent={<LuBookOpen className="text-lg shrink-0" />}
-                                                data-umami-event="read-online"
-                                                data-umami-event-location="download-page-main"
-                                            >
-                                                Read Online
-                                            </Button>
+                                            {/* PDF Option */}
+                                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-gray-200/90 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+                                                <div className="flex items-start sm:items-center gap-3.5">
+                                                    <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-book-orange font-bold text-xs uppercase tracking-wider shadow-inner">
+                                                        PDF
+                                                    </div>
+                                                    <div className="text-left">
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="font-bold text-gray-900 text-sm sm:text-base">PDF Edition</span>
+                                                            <span className="text-xs text-gray-300 font-medium">•</span>
+                                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">13.1 MB</span>
+                                                        </div>
+                                                        <p className="text-xs text-gray-500 mt-0.5">
+                                                            For printing, tablets, and desktop reading
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <Button
+                                                    size="sm"
+                                                    as="a"
+                                                    href="/This_Is_Also_in_the_Mind-alsointhemind.com.pdf"
+                                                    download="This_Is_Also_in_the_Mind-alsointhemind.com.pdf"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    variant="solid"
+                                                    className="bg-book-orange text-white font-semibold text-xs sm:text-sm px-4 py-2 shrink-0 shadow-sm hover:bg-[#e06213] transition-all w-full sm:w-auto"
+                                                    startContent={<LuDownload className="text-base shrink-0" />}
+                                                    data-umami-event="download-pdf"
+                                                    data-umami-event-location="download-page-main"
+                                                >
+                                                    Download
+                                                </Button>
+                                            </div>
+
+                                            {/* EPUB Option */}
+                                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-gray-200/90 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+                                                <div className="flex items-start sm:items-center gap-3.5">
+                                                    <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-book-orange font-bold text-xs uppercase tracking-wider shadow-inner">
+                                                        EPUB
+                                                    </div>
+                                                    <div className="text-left">
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="font-bold text-gray-900 text-sm sm:text-base">EPUB Edition</span>
+                                                            <span className="text-xs text-gray-300 font-medium">•</span>
+                                                            <span className="text-xs font-semibold text-gray-600 bg-gray-100 px-2 py-0.5 rounded-full">7.0 MB</span>
+                                                        </div>
+                                                        <p className="text-xs text-gray-500 mt-0.5">
+                                                            For e-readers, Kindle, and mobile reading
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <Button
+                                                    size="sm"
+                                                    as="a"
+                                                    href="/This_Is_Also_in_the_Mind-alsointhemind.com.epub"
+                                                    download="This_Is_Also_in_the_Mind-alsointhemind.com.epub"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    variant="solid"
+                                                    className="bg-book-orange text-white font-semibold text-xs sm:text-sm px-4 py-2 shrink-0 shadow-sm hover:bg-[#e06213] transition-all w-full sm:w-auto"
+                                                    startContent={<LuDownload className="text-base shrink-0" />}
+                                                    data-umami-event="download-epub"
+                                                    data-umami-event-location="download-page-main"
+                                                >
+                                                    Download
+                                                </Button>
+                                            </div>
+
+                                            {/* Read Online Option */}
+                                            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-gray-200/90 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+                                                <div className="flex items-start sm:items-center gap-3.5">
+                                                    <div className="w-11 h-11 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-book-orange font-bold text-xs uppercase tracking-wider shadow-inner">
+                                                        WEB
+                                                    </div>
+                                                    <div className="text-left">
+                                                        <div className="flex items-center gap-2">
+                                                            <span className="font-bold text-gray-900 text-sm sm:text-base">Read Online</span>
+                                                            <span className="text-xs text-gray-300 font-medium">•</span>
+                                                            <span className="text-xs font-semibold text-book-orange bg-orange-50 border border-orange-100 px-2 py-0.5 rounded-full">Browser</span>
+                                                        </div>
+                                                        <p className="text-xs text-gray-500 mt-0.5">
+                                                            Read in your browser with search and font controls
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <Button
+                                                    size="sm"
+                                                    as={Link}
+                                                    href="/read"
+                                                    variant="solid"
+                                                    className="bg-book-orange text-white font-semibold text-xs sm:text-sm px-4 py-2 shrink-0 shadow-sm hover:bg-[#e06213] transition-all w-full sm:w-auto"
+                                                    startContent={<LuBookOpen className="text-base shrink-0" />}
+                                                    data-umami-event="read-online"
+                                                    data-umami-event-location="download-page-main"
+                                                >
+                                                    Read Online
+                                                </Button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -232,29 +299,23 @@ export default function DownloadPage() {
                                         </div>
 
                                         {/* Specs Grid */}
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 w-full mb-6">
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
+                                        <div className="grid grid-cols-3 gap-2.5 sm:gap-3 w-full mb-6">
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Language</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
                                                     English
                                                 </span>
                                             </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Length</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuBookOpen className="text-book-orange text-xs" /> 1,278 Pages
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    1,278 Pages
                                                 </span>
                                             </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Format</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuFileText className="text-book-orange text-xs" /> PDF
-                                                </span>
-                                            </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">File Size</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuDownload className="text-book-orange text-xs" /> 3.1 MB
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
+                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Scope</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    5 Nikāyas
                                                 </span>
                                             </div>
                                         </div>
@@ -271,23 +332,69 @@ export default function DownloadPage() {
                                         </div>
                                     </div>
 
-                                    {/* Action Buttons */}
-                                    <div className="pt-4 border-t border-gray-100 flex items-center">
-                                        <Button
-                                            size="md"
-                                            as="a"
-                                            href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.pdf"
-                                            download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            variant="solid"
-                                            className="bg-book-orange text-white font-semibold w-full shadow-sm hover:bg-[#e06213] transition-colors"
-                                            startContent={<LuDownload className="text-lg shrink-0" />}
-                                            data-umami-event="download-sutta-companion-pdf"
-                                            data-umami-event-location="download-page-companion"
-                                        >
-                                            Download PDF (3.1 MB)
-                                        </Button>
+                                    {/* Action Buttons / Download Tiles */}
+                                    <div className="space-y-2.5 pt-4 border-t border-gray-100">
+                                        {/* PDF Option */}
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-gray-50/90 border border-gray-100 hover:border-orange-200 transition-colors">
+                                            <div className="flex items-start sm:items-center gap-2.5">
+                                                <span className="w-9 h-9 rounded-lg bg-orange-100/70 text-book-orange font-bold text-xs flex items-center justify-center shrink-0">
+                                                    PDF
+                                                </span>
+                                                <div className="text-left">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <span className="text-xs font-bold text-gray-900">PDF Edition</span>
+                                                        <span className="text-[10px] font-semibold text-gray-500 bg-gray-200/60 px-1.5 py-0.2 rounded">3.1 MB</span>
+                                                    </div>
+                                                    <span className="text-[11px] text-gray-500">For printing, tablets, and desktop reading</span>
+                                                </div>
+                                            </div>
+                                            <Button
+                                                size="sm"
+                                                as="a"
+                                                href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.pdf"
+                                                download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                variant="solid"
+                                                className="bg-book-orange text-white font-semibold text-xs px-3.5 h-8 shrink-0 shadow-sm hover:bg-[#e06213] transition-colors w-full sm:w-auto"
+                                                startContent={<LuDownload className="text-sm shrink-0" />}
+                                                data-umami-event="download-sutta-companion-pdf"
+                                                data-umami-event-location="download-page-companion"
+                                            >
+                                                Download
+                                            </Button>
+                                        </div>
+
+                                        {/* EPUB Option */}
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-gray-50/90 border border-gray-100 hover:border-orange-200 transition-colors">
+                                            <div className="flex items-start sm:items-center gap-2.5">
+                                                <span className="w-9 h-9 rounded-lg bg-orange-100/70 text-book-orange font-bold text-xs flex items-center justify-center shrink-0">
+                                                    EPUB
+                                                </span>
+                                                <div className="text-left">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <span className="text-xs font-bold text-gray-900">EPUB Edition</span>
+                                                        <span className="text-[10px] font-semibold text-gray-500 bg-gray-200/60 px-1.5 py-0.2 rounded">1.7 MB</span>
+                                                    </div>
+                                                    <span className="text-[11px] text-gray-500">For e-readers, Kindle, and mobile reading</span>
+                                                </div>
+                                            </div>
+                                            <Button
+                                                size="sm"
+                                                as="a"
+                                                href="/This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.epub"
+                                                download="This_Is_Also_in_the_Mind_Recommended_Sutta_Readings-alsointhemind.com.epub"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                variant="solid"
+                                                className="bg-book-orange text-white font-semibold text-xs px-3.5 h-8 shrink-0 shadow-sm hover:bg-[#e06213] transition-colors w-full sm:w-auto"
+                                                startContent={<LuDownload className="text-sm shrink-0" />}
+                                                data-umami-event="download-sutta-companion-epub"
+                                                data-umami-event-location="download-page-companion"
+                                            >
+                                                Download
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -330,29 +437,23 @@ export default function DownloadPage() {
                                         </div>
 
                                         {/* Specs Grid */}
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 w-full mb-6">
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
+                                        <div className="grid grid-cols-3 gap-2.5 sm:gap-3 w-full mb-6">
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Language</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
                                                     English
                                                 </span>
                                             </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
                                                 <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Length</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuBookOpen className="text-book-orange text-xs" /> 102 Pages
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    102 Pages
                                                 </span>
                                             </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Format</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuFileText className="text-book-orange text-xs" /> PDF
-                                                </span>
-                                            </div>
-                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start">
-                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">File Size</span>
-                                                <span className="text-sm font-bold text-gray-900 flex items-center gap-1 mt-0.5">
-                                                    <LuDownload className="text-book-orange text-xs" /> 483 KB
+                                            <div className="bg-gray-50/80 p-2.5 sm:p-3 rounded-xl border border-gray-100 flex flex-col items-center sm:items-start text-center sm:text-left">
+                                                <span className="text-[11px] uppercase tracking-wider font-semibold text-gray-500">Focus</span>
+                                                <span className="text-xs sm:text-sm font-bold text-gray-900 mt-0.5">
+                                                    4 Noble Truths
                                                 </span>
                                             </div>
                                         </div>
@@ -369,23 +470,38 @@ export default function DownloadPage() {
                                         </div>
                                     </div>
 
-                                    {/* Action Buttons */}
-                                    <div className="pt-4 border-t border-gray-100 flex items-center">
-                                        <Button
-                                            size="md"
-                                            as="a"
-                                            href="/The_Word_of_the_Buddha.pdf"
-                                            download="The_Word_of_the_Buddha.pdf"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            variant="solid"
-                                            className="bg-book-orange text-white font-semibold w-full shadow-sm hover:bg-[#e06213] transition-colors"
-                                            startContent={<LuDownload className="text-lg shrink-0" />}
-                                            data-umami-event="download-word-of-the-buddha-pdf"
-                                            data-umami-event-location="download-page-companion"
-                                        >
-                                            Download PDF (483 KB)
-                                        </Button>
+                                    {/* Action Buttons / Download Tiles */}
+                                    <div className="space-y-2.5 pt-4 border-t border-gray-100">
+                                        {/* PDF Option */}
+                                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-gray-50/90 border border-gray-100 hover:border-orange-200 transition-colors">
+                                            <div className="flex items-start sm:items-center gap-2.5">
+                                                <span className="w-9 h-9 rounded-lg bg-orange-100/70 text-book-orange font-bold text-xs flex items-center justify-center shrink-0">
+                                                    PDF
+                                                </span>
+                                                <div className="text-left">
+                                                    <div className="flex items-center gap-1.5">
+                                                        <span className="text-xs font-bold text-gray-900">PDF Edition</span>
+                                                        <span className="text-[10px] font-semibold text-gray-500 bg-gray-200/60 px-1.5 py-0.2 rounded">483 KB</span>
+                                                    </div>
+                                                    <span className="text-[11px] text-gray-500">For printing, tablets, and desktop reading</span>
+                                                </div>
+                                            </div>
+                                            <Button
+                                                size="sm"
+                                                as="a"
+                                                href="/The_Word_of_the_Buddha.pdf"
+                                                download="The_Word_of_the_Buddha.pdf"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                variant="solid"
+                                                className="bg-book-orange text-white font-semibold text-xs px-3.5 h-8 shrink-0 shadow-sm hover:bg-[#e06213] transition-colors w-full sm:w-auto"
+                                                startContent={<LuDownload className="text-sm shrink-0" />}
+                                                data-umami-event="download-word-of-the-buddha-pdf"
+                                                data-umami-event-location="download-page-companion"
+                                            >
+                                                Download
+                                            </Button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
