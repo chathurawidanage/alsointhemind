@@ -10,7 +10,158 @@ import {
     LuBookOpen,
     LuLayers,
     LuCheck,
+    LuExternalLink,
 } from "react-icons/lu";
+
+interface ExternalBookItem {
+    title: string;
+    subtitle?: string;
+    author?: string;
+    description: string;
+    badge: string;
+    formatLabel: string;
+    formatMeta: string;
+    formatHint: string;
+    actionLabel: string;
+    href: string;
+    umamiEvent: string;
+    umamiLocation: string;
+}
+
+const RECOMMENDED_COMPANION_BOOKS: ExternalBookItem[] = [
+    {
+        title: "The Practice of Loving-Kindness (Mettā)",
+        author: "By Ven. Ñāṇamoli Thera",
+        description:
+            "Recommended by Venerable Ñāṇavimala. A classic treatise and anthology on cultivating loving-kindness (mettā) drawn from the Pāli Canon and commentaries.",
+        badge: "PDF",
+        formatLabel: "PDF Edition",
+        formatMeta: "External",
+        formatHint: "Hosted at noblepath.info",
+        actionLabel: "Open PDF",
+        href: "https://noblepath.info/PDFs/practice_of_loving_kindness.pdf",
+        umamiEvent: "external-practice-of-loving-kindness-pdf",
+        umamiLocation: "download-page-companion",
+    },
+    {
+        title: "The Mirror of the Dhamma",
+        subtitle: "A Manual of Buddhist Chanting and Devotional Texts",
+        author: "By Ven. Nārada & Bhikkhu Kassapa",
+        description:
+            "Recommended by Venerable Ñāṇavimala. A traditional handbook of Pāli devotional chants, reflections, and protective suttas with English translations.",
+        badge: "PDF",
+        formatLabel: "PDF Edition",
+        formatMeta: "External",
+        formatHint: "Hosted at buddhistuniversity.net",
+        actionLabel: "Open PDF",
+        href: "https://smallpdfs.buddhistuniversity.net/narada-kassapa_1963_mirror-of-the-dhamma.pdf",
+        umamiEvent: "external-mirror-of-the-dhamma-pdf",
+        umamiLocation: "download-page-companion",
+    },
+];
+
+const BIOGRAPHICAL_READING_BOOKS: ExternalBookItem[] = [
+    {
+        title: "Pure Inspiration",
+        subtitle:
+            "Venerable Ñāṇavimala Mahāthera — Recollections of His Life, Practice and Teachings",
+        description:
+            "A collection of recollections and reflections on the life, austere forest practice, and Dhamma teachings of Venerable Ñāṇavimala Mahāthera.",
+        badge: "PDF",
+        formatLabel: "PDF Edition",
+        formatMeta: "External",
+        formatHint: "Hosted at buddhasasana.net",
+        actionLabel: "Open PDF",
+        href: "https://ven-nyanavimala.buddhasasana.net/texts/pure-inspiration.pdf",
+        umamiEvent: "external-pure-inspiration-pdf",
+        umamiLocation: "download-page-biographical",
+    },
+    {
+        title: "The Life of Nyanatiloka Thera",
+        subtitle: "The Biography of a Western Buddhist Pioneer",
+        author: "By Bhikkhu Ñāṇatusita & Hellmuth Hecker",
+        description:
+            "The biography of Venerable Nyanatiloka Mahāthera—Venerable Ñāṇavimala's teacher and preceptor—tracing his pioneering life in Sri Lanka.",
+        badge: "WEB",
+        formatLabel: "Internet Archive",
+        formatMeta: "External",
+        formatHint: "Read online at archive.org",
+        actionLabel: "Read Online",
+        href: "https://archive.org/details/bub_gb_LLkyNT5md7cC/page/n130/mode/1up?utm",
+        umamiEvent: "external-life-of-nyanatiloka",
+        umamiLocation: "download-page-biographical",
+    },
+];
+
+function ExternalBookCard({ book }: { book: ExternalBookItem }) {
+    return (
+        <div className="bg-white rounded-3xl border border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between">
+            <div className="mb-6">
+                <div className="flex items-start gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-book-orange">
+                        <LuBookOpen className="text-xl" />
+                    </div>
+                    <div className="flex-1 text-left">
+                        <h3
+                            className={`text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-tight leading-snug mb-1.5 ${leagueSpartan.className}`}
+                        >
+                            {book.title}
+                        </h3>
+                        {book.subtitle && (
+                            <p
+                                className={`text-base font-bold text-title-gray italic mb-2 ${libreBaskerville.className}`}
+                            >
+                                {book.subtitle}
+                            </p>
+                        )}
+                        {book.author && (
+                            <p className="text-xs uppercase tracking-wider font-semibold text-gray-500">
+                                {book.author}
+                            </p>
+                        )}
+                    </div>
+                </div>
+
+                <p className={`text-sm text-gray-600 leading-relaxed ${figTree.className}`}>
+                    {book.description}
+                </p>
+            </div>
+
+            <div className="space-y-2.5 pt-4 border-t border-gray-100">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-3 rounded-xl bg-gray-50/90 border border-gray-100 hover:border-orange-200 transition-colors">
+                    <div className="flex items-start sm:items-center gap-2.5">
+                        <span className="w-9 h-9 rounded-lg bg-orange-100/70 text-book-orange font-bold text-xs flex items-center justify-center shrink-0">
+                            {book.badge}
+                        </span>
+                        <div className="text-left">
+                            <div className="flex items-center gap-1.5">
+                                <span className="text-xs font-bold text-gray-900">{book.formatLabel}</span>
+                                <span className="text-[10px] font-semibold text-gray-500 bg-gray-200/60 px-1.5 py-0.2 rounded">
+                                    {book.formatMeta}
+                                </span>
+                            </div>
+                            <span className="text-[11px] text-gray-500">{book.formatHint}</span>
+                        </div>
+                    </div>
+                    <Button
+                        size="sm"
+                        as="a"
+                        href={book.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variant="solid"
+                        className="bg-book-orange text-white font-semibold text-xs px-3.5 h-8 shrink-0 shadow-sm hover:bg-[#e06213] transition-colors w-full sm:w-auto"
+                        startContent={<LuExternalLink className="text-sm shrink-0" />}
+                        data-umami-event={book.umamiEvent}
+                        data-umami-event-location={book.umamiLocation}
+                    >
+                        {book.actionLabel}
+                    </Button>
+                </div>
+            </div>
+        </div>
+    );
+}
 
 import mainBook3D from "../../public/book_3d_v5.png";
 import suttaReadingsCover from "../../public/cover_sutta_readings.png";
@@ -504,6 +655,36 @@ export default function DownloadPage() {
                                         </div>
                                     </div>
                                 </div>
+
+                                {RECOMMENDED_COMPANION_BOOKS.map((book) => (
+                                    <ExternalBookCard key={book.href} book={book} />
+                                ))}
+                            </div>
+                        </section>
+
+                        {/* 3. Biographical & Historical Reading Section */}
+                        <section aria-labelledby="biographical-reading-heading" className="pt-4">
+                            <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+                                <span
+                                    className={`text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-book-orange block mb-2 ${leagueSpartan.className}`}
+                                >
+                                    Lives & Lineage
+                                </span>
+                                <h2
+                                    id="biographical-reading-heading"
+                                    className={`text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 uppercase tracking-tight mb-4 ${leagueSpartan.className}`}
+                                >
+                                    Biographical & Historical Reading
+                                </h2>
+                                <p className={`text-base sm:text-lg text-gray-600 leading-relaxed ${figTree.className}`}>
+                                    Biographical accounts and recollections of Venerable Ñāṇavimala Mahāthera and his preceptor Venerable Nyanatiloka Mahāthera.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+                                {BIOGRAPHICAL_READING_BOOKS.map((book) => (
+                                    <ExternalBookCard key={book.href} book={book} />
+                                ))}
                             </div>
                         </section>
                     </div>
