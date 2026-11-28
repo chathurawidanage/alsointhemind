@@ -1,7 +1,7 @@
 "use client";
 
 import { HeroUIProvider, Button, Link } from "@heroui/react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 import { AppNavbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { leagueSpartan, libreBaskerville, figTree } from "../fonts";
@@ -13,11 +13,21 @@ import {
     LuExternalLink,
 } from "react-icons/lu";
 
+import mainBook3D from "../../public/book_3d_v5.png";
+import suttaReadingsCover from "../../public/cover_sutta_readings.png";
+import wordOfTheBuddhaCover from "../../public/cover_word_of_the_buddha.png";
+import practiceOfLovingKindnessCover from "../../public/cover_practice_of_loving_kindness.jpg";
+import mirrorOfTheDhammaCover from "../../public/cover_mirror_of_the_dhamma.jpg";
+import pureInspirationCover from "../../public/cover_pure_inspiration.png";
+import lifeOfNyanatilokaCover from "../../public/cover_life_of_nyanatiloka.png";
+
 interface ExternalBookItem {
     title: string;
     subtitle?: string;
     author?: string;
     description: string;
+    cover: StaticImageData;
+    coverAlt: string;
     badge: string;
     formatLabel: string;
     formatMeta: string;
@@ -34,6 +44,8 @@ const RECOMMENDED_COMPANION_BOOKS: ExternalBookItem[] = [
         author: "By Ven. Ñāṇamoli Thera",
         description:
             "Recommended by Venerable Ñāṇavimala. A classic treatise and anthology on cultivating loving-kindness (mettā) drawn from the Pāli Canon and commentaries.",
+        cover: practiceOfLovingKindnessCover,
+        coverAlt: "The Practice of Loving-Kindness (Mettā) by Ven. Ñāṇamoli Thera cover",
         badge: "PDF",
         formatLabel: "PDF Edition",
         formatMeta: "External",
@@ -49,6 +61,8 @@ const RECOMMENDED_COMPANION_BOOKS: ExternalBookItem[] = [
         author: "By Ven. Nārada & Bhikkhu Kassapa",
         description:
             "Recommended by Venerable Ñāṇavimala. A traditional handbook of Pāli devotional chants, reflections, and protective suttas with English translations.",
+        cover: mirrorOfTheDhammaCover,
+        coverAlt: "The Mirror of the Dhamma by Ven. Nārada and Bhikkhu Kassapa cover",
         badge: "PDF",
         formatLabel: "PDF Edition",
         formatMeta: "External",
@@ -67,6 +81,8 @@ const BIOGRAPHICAL_READING_BOOKS: ExternalBookItem[] = [
             "Venerable Ñāṇavimala Mahāthera — Recollections of His Life, Practice and Teachings",
         description:
             "A collection of recollections and reflections on the life, austere forest practice, and Dhamma teachings of Venerable Ñāṇavimala Mahāthera.",
+        cover: pureInspirationCover,
+        coverAlt: "Pure Inspiration: Venerable Ñāṇavimala Mahāthera cover",
         badge: "PDF",
         formatLabel: "PDF Edition",
         formatMeta: "External",
@@ -82,6 +98,8 @@ const BIOGRAPHICAL_READING_BOOKS: ExternalBookItem[] = [
         author: "By Bhikkhu Ñāṇatusita & Hellmuth Hecker",
         description:
             "The biography of Venerable Nyanatiloka Mahāthera—Venerable Ñāṇavimala's teacher and preceptor—tracing his pioneering life in Sri Lanka.",
+        cover: lifeOfNyanatilokaCover,
+        coverAlt: "The Life of Nyanatiloka Thera by Bhikkhu Ñāṇatusita and Hellmuth Hecker cover",
         badge: "WEB",
         formatLabel: "Internet Archive",
         formatMeta: "External",
@@ -96,35 +114,40 @@ const BIOGRAPHICAL_READING_BOOKS: ExternalBookItem[] = [
 function ExternalBookCard({ book }: { book: ExternalBookItem }) {
     return (
         <div className="bg-white rounded-3xl border border-gray-200/90 shadow-sm hover:shadow-xl transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between">
-            <div className="mb-6">
-                <div className="flex items-start gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 text-book-orange">
-                        <LuBookOpen className="text-xl" />
-                    </div>
-                    <div className="flex-1 text-left">
-                        <h3
-                            className={`text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-tight leading-snug mb-1.5 ${leagueSpartan.className}`}
-                        >
-                            {book.title}
-                        </h3>
-                        {book.subtitle && (
-                            <p
-                                className={`text-base font-bold text-title-gray italic mb-2 ${libreBaskerville.className}`}
-                            >
-                                {book.subtitle}
-                            </p>
-                        )}
-                        {book.author && (
-                            <p className="text-xs uppercase tracking-wider font-semibold text-gray-500">
-                                {book.author}
-                            </p>
-                        )}
+            <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start mb-6">
+                <div className="w-[180px] sm:w-[170px] shrink-0 group">
+                    <div className="relative rounded-lg overflow-hidden shadow-md group-hover:shadow-2xl group-hover:-translate-y-1 transition-all duration-300 border border-gray-200/80 bg-gray-100">
+                        <Image
+                            src={book.cover}
+                            alt={book.coverAlt}
+                            className="w-full h-auto object-cover select-none"
+                            sizes="180px"
+                        />
                     </div>
                 </div>
 
-                <p className={`text-sm text-gray-600 leading-relaxed ${figTree.className}`}>
-                    {book.description}
-                </p>
+                <div className="flex-1 text-center sm:text-left">
+                    <h3
+                        className={`text-2xl sm:text-3xl font-bold text-gray-900 uppercase tracking-tight leading-snug mb-2 ${leagueSpartan.className}`}
+                    >
+                        {book.title}
+                    </h3>
+                    {book.subtitle && (
+                        <p
+                            className={`text-base font-bold text-title-gray italic mb-2 ${libreBaskerville.className}`}
+                        >
+                            {book.subtitle}
+                        </p>
+                    )}
+                    {book.author && (
+                        <p className="text-xs uppercase tracking-wider font-semibold text-gray-500 mb-3">
+                            {book.author}
+                        </p>
+                    )}
+                    <p className={`text-sm text-gray-600 leading-relaxed ${figTree.className}`}>
+                        {book.description}
+                    </p>
+                </div>
             </div>
 
             <div className="space-y-2.5 pt-4 border-t border-gray-100">
@@ -162,10 +185,6 @@ function ExternalBookCard({ book }: { book: ExternalBookItem }) {
         </div>
     );
 }
-
-import mainBook3D from "../../public/book_3d_v5.png";
-import suttaReadingsCover from "../../public/cover_sutta_readings.png";
-import wordOfTheBuddhaCover from "../../public/cover_word_of_the_buddha.png";
 
 export default function DownloadPage() {
     return (
